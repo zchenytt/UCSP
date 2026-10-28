@@ -66,3 +66,17 @@ for _ = 1:500
     plot_1_scene!(zrnd, SEEDi, kv, ΣD, SimL, ax1, w1s, w2s, w3s, ini_index, z1, z2, z3, linewidth)
 end
 f
+
+
+#f = Figure(size = (400, 200); figure_padding = 0.8);
+#ax1 = Axis(f[1, 1]; title = rich("采样间隔15min的三区域风电场原始出力时间序列"; font = "SimSun"), xlabel = rich("时段索引（相对）"; font = "SimSun"), ylabel = rich("功率/", rich("MW", font = "Times New Roman"); font = "SimSun"), xgridvisible = false, ygridvisible = false)
+#SimL = 1 + 96*7
+#xtks = 0:SimL-1
+#lw = 1.0
+#ms = 7.0
+#inii = rand(1:100)
+#r = range(inii, length = SimL)
+#scatterlines!(ax1, xtks, w1[r], color = :red, linewidth = lw, markersize = ms)
+#scatterlines!(ax1, xtks, w2[r], color = :blue, linewidth = lw, markersize = ms, marker = :utriangle)
+#scatterlines!(ax1, xtks, w3[r], color = :green, linewidth = lw, markersize = ms, marker = :xcross)
+#f
