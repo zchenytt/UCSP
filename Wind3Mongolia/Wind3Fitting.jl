@@ -52,7 +52,7 @@ for i = 2:length(z1)
     Σ .+= mat
 end
 Σ ./= length(2:length(z1));
-Σ .*= 0.1; # tuning
+for i = 1:minimum(size(Σ)) Σ[i, i] *= 0.1 end # tuning
 ΣD = Distributions.MvNormal(zeros(3), Σ); # we've got the model param (kv, ΣD)
 
 f = Figure();
