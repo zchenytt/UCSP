@@ -1,5 +1,6 @@
 # Basic ideas of the Vector AR(1) model incorporating spatial and temporal correlation among the 3 wind farms
 import JLD2, Random, LinearAlgebra, Distributions
+"z[t+1] = bias + (phi)z[t] + eps_t = (1-phi)mean + (phi)z[t] + eps_t; where, mean is the long-term steady value"
 function get_bias_phi(z) # Least Squares Estimation
     S = length(z) - 1
     r = range(1; length=S)
