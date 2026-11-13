@@ -1,9 +1,10 @@
 module TSSP
-import Random, JuMP, ..Case2383, ..Settings, ..TS
+import Random, JuMP, ..Case2383, ..TS
 const ı = JuMP.value
 const UpResZones = 1:4
 const ϖCostCoeff = 2.0
 const ζ2ϖCostRatio = 25
+const urShortage2linCmaxRatio = 10
 
 _0() = JuMP.AffExpr()
 _Dis(HRZ, S1S) = Dict((i,s) => _0() for i=HRZ for s=S1S)
@@ -13,18 +14,29 @@ function _RURDSUSD(Gwid, rui, rdi, r2s, Pmin, PMax)
     Su, Sd = clamp(r2s * Ru, Pmin, PMax), clamp(r2s * Rd, Pmin, PMax)
     Ru, Rd, Su, Sd
 end
+function _hrz_T(li0, li1, T)
+    if li1 - li0 < T
+        HRZ = li0:li1
+        T = length(HRZ)-1
+    else
+        HRZ = range(li0; length=1+T)
+    end
+    HRZ, T
+end
 
 """
  m Presolve 2
  wind look-ahead scenes are completely decided by zi0 + ddrngWindScenes
 """
-function x_now!(m, li0, zi0, T, S, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff, ζ2ϖCostRatio=ζ2ϖCostRatio, PfK=1.0, addPfLim=true)
+function Model!(m, li0, li1, zi0, T, S, xH, pAH, GD, LD, liD;
+    urShortage2linCmaxRatio=urShortage2linCmaxRatio, ϖCostCoeff=ϖCostCoeff, ζ2ϖCostRatio=ζ2ϖCostRatio, PfK=1.0, addPfLim=true)
     GDˈn, GDˈUT, GDˈDT, GDˈpmax, GDˈMmRatio, GDˈpmin = GD.n, GD.UT, GD.DT, GD.pmax, GD.MmRatio, GD.pmin
     GDˈrui, GDˈrdi, GDˈr2s, GDˈsci, GDˈdci, GDˈC = GD.rui, GD.rdi, GD.r2s, GD.sci, GD.dci, GD.C
     LDˈn, LDˈg, F, ζCostCoeff, WN = LD.n, LD.g, Case2383.F, (ζ2ϖCostRatio)ϖCostCoeff, Case2383.WindN
-    S1S, HRZ, LKA = 1:S, range(li0; length=1+T), range(li0+1; length=T) # planning horizon
-    rngW, Qˈy, uvCostNow, lines = Random.Xoshiro(zi0 + S), _0(), _0(), keys(liD)
+    HRZ, T = _hrz_T(li0, li1, T); LKA, S1S = HRZ[2:end], 1:S
+    rngW, Qˈy, uvCostNow, lines, urCshort = Random.Xoshiro(zi0 + S), _0(), _0(), keys(liD), urShortage2linCmaxRatio * maximum(maximum, GDˈC)
     egp, pfe, rgp = _Dis(HRZ,S1S), Dict(l => _Dis(HRZ,S1S) for l=lines), [_Dis(HRZ,S1S) for z=UpResZones]
+
     #= The x[z,g][i,s] and its t=0 special =#
         x0, x = _6(), Dict((z,g) => _6() for (z,Ø)=enumerate(GDˈn) for g=eachindex(Ø))
         for (z,Ø)=enumerate(GDˈn), g=eachindex(Ø)
@@ -59,6 +71,7 @@ function x_now!(m, li0, zi0, T, S, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff
         0 ≤ ur[z=eachindex(GDˈn), g=eachindex(GDˈn[z]), i=HRZ, s=S1S]
         0 ≤ pI[z=eachindex(GDˈn), g=eachindex(GDˈn[z]), i=HRZ, s=S1S] # p_Injection into the network
         0 ≤  ϱ[z=eachindex(GDˈn), g=eachindex(GDˈn[z]), i=HRZ, s=S1S] # curtailed generation
+        0 ≤ ua[z=UpResZones, i=HRZ, s=S1S]
         0           ≤   ϖ[z=eachindex(WN),   i=HRZ, s=S1S] ≤ 1
         0           ≤   ζ[z=eachindex(LDˈn), i=HRZ, s=S1S] ≤ 1
         -liD[l]PfK  ≤  pf[l=lines,i=HRZ,s=S1S]             ≤ liD[l]PfK
@@ -71,7 +84,7 @@ function x_now!(m, li0, zi0, T, S, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff
             Ru, Rd, Su, Sd = _RURDSUSD(Gwid, rui, rdi, r2s, Pmin, PMax)
         #= UVX-Poly =#
             i = li0; s = 1;                      JuMP.@constraint(m, u[z,g,i,s] - v[z,g,i,s] == xˈzg[i,s] - xHˈzg1)
-            i = li0+1;                  JuMP.@constraint(m, [s=S1S], u[z,g,i,s] - v[z,g,i,s] == xˈzg[i,s] - xˈzg[i-1,1])
+            i = li0+1; i ∈ HRZ && JuMP.@constraint(m, [s=S1S], u[z,g,i,s] - v[z,g,i,s] == xˈzg[i,s] - xˈzg[i-1,1])
             JuMP.@constraint(m, [i=range(li0+2; length=T-1), s=S1S], u[z,g,i,s] - v[z,g,i,s] == xˈzg[i,s] - xˈzg[i-1,s])
             i = li0; s = 1; JuMP.@constraint(m, u[z,g,i,s] <= xˈzg[i,s]); JuMP.@constraint(m, xˈzg[i,s] <= 1-v[z,g,i,s])
             for i=LKA, s=S1S
@@ -114,12 +127,12 @@ function x_now!(m, li0, zi0, T, S, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff
             if MmRatio > 1.1
                 Ju, Jv = Su - Pmin, Sd - Pmin - Rd
                 i = li0; JuMP.@constraint(m, [s=S1S], pA[z,g,i,s] + ur[z,g,i,s] - pAHˈzg ≤ Ru * xHˈzg1 + Ju * u[z,g,i,1])
-                JuMP.@constraint(m, [s=S1S], pA[z,g,i+1,s] + ur[z,g,i+1,s] - pA[z,g,i,s] ≤ Ru * xˈzg[i,1] + Ju * u[z,g,i+1,s])
+                i+1 ∈ HRZ && JuMP.@constraint(m, [s=S1S], pA[z,g,i+1,s] + ur[z,g,i+1,s] - pA[z,g,i,s] ≤ Ru * xˈzg[i,1] + Ju * u[z,g,i+1,s])
                 JuMP.@constraint(m, [i=range(li0+2; length=T-1), s=S1S], 
                     pA[z,g,i,s] + ur[z,g,i,s] - pA[z,g,i-1,s] ≤ Ru * xˈzg[i-1,s] + Ju * u[z,g,i,s]
                 )
                 i = li0; JuMP.@constraint(m, [s=S1S], pAHˈzg - pA[z,g,i,s] ≤ Rd * xHˈzg1 + Jv * v[z,g,i,1])
-                JuMP.@constraint(m, [s=S1S], pA[z,g,i,s] - pA[z,g,i+1,s] ≤ Rd * xˈzg[i,1] + Jv * v[z,g,i+1,s])
+                i+1 ∈ HRZ && JuMP.@constraint(m, [s=S1S], pA[z,g,i,s] - pA[z,g,i+1,s] ≤ Rd * xˈzg[i,1] + Jv * v[z,g,i+1,s])
                 JuMP.@constraint(m, [i=range(li0+2; length=T-1), s=S1S],
                     pA[z,g,i-1,s] - pA[z,g,i,s] ≤ Rd * xˈzg[i-1,s] + Jv * v[z,g,i,s]
                 )
@@ -204,13 +217,14 @@ function x_now!(m, li0, zi0, T, S, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff
                 end
             end
         end
-
+    #= buy up reserve =#
+        for i=ua JuMP.add_to_expression!(Qˈy, urCshort/S, i) end
     JuMP.@objective(m, Min, Qˈy)
-    JuMP.@constraint(m, [z=UpResZones, i=HRZ, s=S1S], rgp[z][i,s] ≥ 0)
+    JuMP.@constraint(m, [z=UpResZones, i=HRZ, s=S1S], rgp[z][i,s] + ua[z,i,s] ≥ 0)
     JuMP.@constraint(m, [i=HRZ, s=S1S], egp[i,s] == 0)
     addPfLim && JuMP.@constraint(m, [l=lines, i=HRZ, s=S1S], pfe[l][i,s] == pf[l,i,s])
     
-    (; m, x, u, v, pA, ur, pI, ϱ, ϖ, ζ, pf, HRZ, S1S, lines, uvCostNow)
+    (; T, m, x, u, v, pA, ur, pI, ϱ, ϖ, ζ, pf, HRZ, S1S, lines, uvCostNow)
 end
 
 #= Receding horizon related =#
