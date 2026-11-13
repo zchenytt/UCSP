@@ -1,3 +1,4 @@
+Run with S = 3:
 SEEDi = 0
 total cost of Main.F2SP is 11484.456749856525
 total cost of Main.TSSP is 10653.585091527413
@@ -118,3 +119,21 @@ total cost of Main.TSSP is 9198.266174845387
 SEEDi = 39
 total cost of Main.F2SP is 10278.531073590564
 total cost of Main.TSSP is 9487.778759981838
+
+
+
+
+Run with S = 12:
+SEEDi = 0
+total cost of Main.F2SP is 11507.229762440573
+total cost of Main.TSSP is 10653.403486760875
+SEEDi = 1
+total cost of Main.F2SP is 16105.732767584637
+total cost of Main.TSSP is 15368.431861889945
+SEEDi = 2
+total cost of Main.F2SP is 19388.78778763821
+total cost of Main.TSSP is 18746.14478959122
+SEEDi = 3
+total cost of Main.F2SP is 2739.424191173546
+total cost of Main.TSSP is 2631.412310867275
+# TODO
