@@ -5,10 +5,11 @@ But in real situations there're multiple EDs, e.g. one run every 15 minutes.
 Since lower-level ED is not the main focus of this project, we just implement an easy oracle.
 """
 module ED
-import Random, JuMP, ..Case2383, ..Settings, ..TS
+import Random, JuMP, ..Case2383, ..TS
 const UpResZones = 1:4
 const ϖCostCoeff = 2.0
 const ζ2ϖCostRatio = 25
+const urShortage2linCmaxRatio = 10
 
 _0() = JuMP.AffExpr()
 function _RURDSUSD(Gwid, rui, rdi, r2s, Pmin, PMax)
@@ -18,17 +19,19 @@ function _RURDSUSD(Gwid, rui, rdi, r2s, Pmin, PMax)
 end
 rB(x) = round(Bool, x)
 
-function static_lp!(m, li0, zi0, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff, ζ2ϖCostRatio=ζ2ϖCostRatio, PfK=1.0, addPfLim=true)
+function static_lp!(m, li0, zi0, xH, pAH, GD, LD, liD;
+    urShortage2linCmaxRatio=urShortage2linCmaxRatio, ϖCostCoeff=ϖCostCoeff, ζ2ϖCostRatio=ζ2ϖCostRatio, PfK=1.0, addPfLim=true)
     GDˈn, GDˈUT, GDˈDT, GDˈpmax, GDˈMmRatio, GDˈpmin = GD.n, GD.UT, GD.DT, GD.pmax, GD.MmRatio, GD.pmin
     GDˈrui, GDˈrdi, GDˈr2s, GDˈsci, GDˈdci, GDˈC = GD.rui, GD.rdi, GD.r2s, GD.sci, GD.dci, GD.C
     LDˈn, LDˈg, F, ζCostCoeff, WN = LD.n, LD.g, Case2383.F, (ζ2ϖCostRatio)ϖCostCoeff, Case2383.WindN
-    Qˈy, egp, lines = _0(), _0(), keys(liD)
+    Qˈy, egp, lines, urCshort = _0(), _0(), keys(liD), urShortage2linCmaxRatio * maximum(maximum, GDˈC)
     pfe, rgp = Dict(l => _0() for l=lines), [_0() for z=UpResZones]
     JuMP.@variables(m, begin
         0 ≤ pA[z=eachindex(GDˈn), g=eachindex(GDˈn[z])]
         0 ≤ ur[z=eachindex(GDˈn), g=eachindex(GDˈn[z])]
         0 ≤ pI[z=eachindex(GDˈn), g=eachindex(GDˈn[z])]
         0 ≤  ϱ[z=eachindex(GDˈn), g=eachindex(GDˈn[z])]
+        0 ≤ ua[z=UpResZones] # additional upper reserve that can be bought with unit price `urCshort`
         0           ≤   ϖ[z=eachindex(WN)  ] ≤ 1
         0           ≤   ζ[z=eachindex(LDˈn)] ≤ 1
         -liD[l]PfK  ≤  pf[l=lines]           ≤ liD[l]PfK
@@ -36,15 +39,14 @@ function static_lp!(m, li0, zi0, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff, 
     for (z,Ø)=enumerate(GDˈn), (g,node)=enumerate(Ø)
             PMax, MmRatio, Pmin, pAHˈzg = GDˈpmax[z][g], GDˈMmRatio[z][g], GDˈpmin[z][g], pAH[z][g]
             Gwid, xˈzg, xHˈzg = PMax-Pmin, xH[z][g][1], xH[z][g][2]
-            if rB(xHˈzg) == rB(xˈzg)
-                uˈzg = vˈzg = false
+            uˈzg, vˈzg = if rB(xHˈzg) == rB(xˈzg)
+                false, false
             elseif rB(xˈzg)
-                uˈzg, vˈzg = true, false
+                true, false
             else
-                uˈzg, vˈzg = false, true
+                false, true
             end
-            UT, DT, linC = GDˈUT[z][g], GDˈDT[z][g], GDˈC[z][g]
-            rui, rdi, r2s, suC, sdC = GDˈrui[z][g], GDˈrdi[z][g], GDˈr2s[z][g], GDˈsci[z][g]linC, GDˈdci[z][g]linC
+            linC, rui, rdi, r2s = GDˈC[z][g], GDˈrui[z][g], GDˈrdi[z][g], GDˈr2s[z][g]
             Ru, Rd, Su, Sd = _RURDSUSD(Gwid, rui, rdi, r2s, Pmin, PMax)
         #= Def Relation =#
             JuMP.@constraint(m, pI[z,g] + ϱ[z,g] == (Pmin)xˈzg + pA[z,g])
@@ -90,7 +92,8 @@ function static_lp!(m, li0, zi0, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff, 
         end
     #= Wind =#
         for (z,v)=enumerate(Case2383.WindP) # Wind Static part: to Reserve, or to the immediate period
-            JuMP.add_to_expression!(Qˈy, ϖCostCoeff * sum(v), ϖ[z])
+            ϖˈz = ϖ[z]
+            JuMP.add_to_expression!(Qˈy, ϖCostCoeff * sum(v), ϖˈz)
             μfra, rˈz = TS.μ01[z], rgp[z]; ze = if z == 1
                 TS.ze1
             elseif z == 2
@@ -105,16 +108,18 @@ function static_lp!(m, li0, zi0, xH, pAH, GD, LD, liD; ϖCostCoeff=ϖCostCoeff, 
                     JuMP.add_to_expression!(rˈz, -upResDemand)
                 pWind, node = wfra * pMa, WN[z][g]
                 JuMP.add_to_expression!(egp, pWind)
-                JuMP.add_to_expression!(egp, -pWind, ϖ[z])
+                JuMP.add_to_expression!(egp, -pWind, ϖˈz)
                 for l=lines
                     Cnl, pfl = F[l,node], pfe[l]
                     JuMP.add_to_expression!(pfl, Cnl * pWind)
-                    JuMP.add_to_expression!(pfl, Cnl * -pWind, ϖ[z])
+                    JuMP.add_to_expression!(pfl, Cnl * -pWind, ϖˈz)
                 end
             end
         end
+    #= buy additional reserve =#
+        for i=ua JuMP.add_to_expression!(Qˈy, urCshort, i) end
     JuMP.@objective(m, Min, Qˈy)
-    JuMP.@constraint(m, [z=UpResZones], rgp[z] ≥ 0)
+    JuMP.@constraint(m, [z=UpResZones], rgp[z] + ua[z] ≥ 0)
     JuMP.@constraint(m, egp == 0)
     addPfLim && JuMP.@constraint(m, [l=lines], pfe[l] == pf[l])
     
