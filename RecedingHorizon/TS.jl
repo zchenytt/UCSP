@@ -70,7 +70,7 @@ const LoadYr = _load01(LoadYrDIR) # 1-year time series
 const z1, z2, z3, ze1, ze2, ze3 = _z1z2z3(Wind3DIR) # z's (real-number) series; We need these since AR is defined on it!
 const φ, b, D = get_wind_params(z1, z2, z3) # AR(1) param on `z`
 const μ01 = @. logistic(b / (1 - φ)) # (timeless mean windgen) will be used in Reserve Data input calculation
-def_t0_indices(rng) = (rand(rng, 1:8760), 1) # li0, zi0 (zei0)
+def_t0_indices(rng) = (rand(rng, 1:8760), rand(rng, 1:73)) # li0, zi0 (zei0)
 
 ar(ϵv, zone, z) = b[zone] + φ[zone]z + ϵv[zone]
 
