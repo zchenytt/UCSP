@@ -124,6 +124,172 @@ total cost of Main.TSSP is 9487.778759981838
 
 
 Run with S = 12:
+SEEDi = 40
+total cost of Main.F2SP is 23646.428750883006
+total cost of Main.TSSP is 23327.200281894216
+runtime = 6852.333264901001s
+SEEDi = 41
+total cost of Main.F2SP is 4358.97478594817
+total cost of Main.TSSP is 3892.4912929135053
+runtime = 7194.2500261800005s
+SEEDi = 42
+total cost of Main.F2SP is 17249.48722720924
+total cost of Main.TSSP is 16310.231469928123
+runtime = 6444.867505478001s
+SEEDi = 43
+total cost of Main.F2SP is 14095.62586309059
+total cost of Main.TSSP is 13031.44954644943
+runtime = 7904.877232548s
+SEEDi = 44
+total cost of Main.F2SP is 10043.759668400497
+total cost of Main.TSSP is 9449.697554137003
+runtime = 5120.445726397001s
+SEEDi = 45
+total cost of Main.F2SP is 12090.754205575879
+total cost of Main.TSSP is 11622.576970139398
+runtime = 6984.5551468310005s
+SEEDi = 46
+total cost of Main.F2SP is 14316.367289503958
+total cost of Main.TSSP is 14244.728636541056
+runtime = 6906.503504648001s
+SEEDi = 47
+total cost of Main.F2SP is 18148.21680878606
+total cost of Main.TSSP is 17279.362646443988
+runtime = 8338.544556472001s
+SEEDi = 48
+total cost of Main.F2SP is 28003.031906368236
+total cost of Main.TSSP is 27757.618348234177
+runtime = 7440.3367055670005s
+SEEDi = 49
+total cost of Main.F2SP is 23776.492775124665
+total cost of Main.TSSP is 23990.932920930587
+runtime = 7424.595674908001s
+SEEDi = 50
+total cost of Main.F2SP is 12541.966348656828
+total cost of Main.TSSP is 11169.23717157067
+runtime = 7176.347457072s
+SEEDi = 51
+total cost of Main.F2SP is 12930.300509472716
+total cost of Main.TSSP is 12509.51479670948
+runtime = 6580.315998737s
+SEEDi = 52
+total cost of Main.F2SP is 12178.264109351883
+total cost of Main.TSSP is 11426.764496411954
+runtime = 7711.379610903001s
+SEEDi = 53
+total cost of Main.F2SP is 24904.314160443857
+total cost of Main.TSSP is 24411.319472334137
+runtime = 6404.953042363s
+SEEDi = 54
+total cost of Main.F2SP is 25158.871484984855
+total cost of Main.TSSP is 24521.70092955885
+runtime = 6879.367434804s
+SEEDi = 55
+total cost of Main.F2SP is 21576.17495138295
+total cost of Main.TSSP is 20813.97513294445
+runtime = 7810.808888175001s
+SEEDi = 56
+total cost of Main.F2SP is 30089.558485697187
+total cost of Main.TSSP is 29616.062774535163
+runtime = 7465.156670746001s
+SEEDi = 57
+total cost of Main.F2SP is 17676.932027128456
+total cost of Main.TSSP is 17114.446669669
+runtime = 7487.352760634s
+SEEDi = 58
+total cost of Main.F2SP is 14867.0467695991
+total cost of Main.TSSP is 14051.491305195459
+runtime = 6442.450228238001s
+SEEDi = 59
+total cost of Main.F2SP is 22497.394621303843
+total cost of Main.TSSP is 22146.200405198066
+runtime = 8032.160430007s
+SEEDi = 60
+total cost of Main.F2SP is 19619.16016637903
+total cost of Main.TSSP is 19373.91857781171
+runtime = 6827.259506987s
+SEEDi = 61
+total cost of Main.F2SP is 19017.734349824823
+total cost of Main.TSSP is 19774.498534171544
+runtime = 5402.328942802001s
+SEEDi = 62
+total cost of Main.F2SP is 28027.350954151858
+total cost of Main.TSSP is 28160.07706108843
+runtime = 5588.289514924s
+SEEDi = 63
+total cost of Main.F2SP is 27411.29768390185
+total cost of Main.TSSP is 26746.626677412823
+runtime = 6517.21979232s
+SEEDi = 64
+total cost of Main.F2SP is 23339.49848226358
+total cost of Main.TSSP is 23385.44283790359
+runtime = 5721.084789745s
+SEEDi = 65
+total cost of Main.F2SP is 15507.92981335042
+total cost of Main.TSSP is 14345.22413327338
+runtime = 7687.4529176900005s
+SEEDi = 66
+total cost of Main.F2SP is 5852.210832242761
+total cost of Main.TSSP is 5185.425932219026
+runtime = 6213.6573386400005s
+SEEDi = 67
+total cost of Main.F2SP is 19484.337573787325
+total cost of Main.TSSP is 19337.48371161555
+runtime = 6275.30509408s
+SEEDi = 68
+total cost of Main.F2SP is 25627.21415716054
+total cost of Main.TSSP is 24819.67035531397
+runtime = 6051.876487977001s
+SEEDi = 69
+total cost of Main.F2SP is 13481.070337868376
+total cost of Main.TSSP is 12791.44630309535
+runtime = 6426.907979456s
+SEEDi = 70
+total cost of Main.F2SP is 8918.410984198987
+total cost of Main.TSSP is 8452.4480040646
+runtime = 6749.517703014s
+SEEDi = 71
+total cost of Main.F2SP is 23925.412473539764
+total cost of Main.TSSP is 23682.32848948926
+runtime = 7175.323160363s
+SEEDi = 72
+total cost of Main.F2SP is 12131.548941290463
+total cost of Main.TSSP is 11856.452815307732
+runtime = 6958.076271052s
+SEEDi = 73
+total cost of Main.F2SP is 13328.544277784527
+total cost of Main.TSSP is 12903.783419565281
+runtime = 6908.923814072001s
+SEEDi = 74
+total cost of Main.F2SP is 9262.609880780856
+total cost of Main.TSSP is 8661.801708746356
+runtime = 7418.571635039s
+SEEDi = 75
+total cost of Main.F2SP is 10339.552576746519
+total cost of Main.TSSP is 9781.975330214247
+runtime = 6459.741588519s
+SEEDi = 76
+total cost of Main.F2SP is 13972.052270556918
+total cost of Main.TSSP is 12826.118589044074
+runtime = 7808.569715583s
+SEEDi = 77
+total cost of Main.F2SP is 11648.145667119816
+total cost of Main.TSSP is 10143.985661259963
+runtime = 6789.262896002s
+SEEDi = 78
+total cost of Main.F2SP is 18370.430830068133
+total cost of Main.TSSP is 18005.22930041323
+runtime = 6397.419911483001s
+SEEDi = 79
+total cost of Main.F2SP is 16325.728196197166
+total cost of Main.TSSP is 15492.140157120039
+runtime = 7039.640862650001s
+SEEDi = 80
+total cost of Main.F2SP is 15704.413008118876
+total cost of Main.TSSP is 15079.115507445327
+runtime = 7025.039100540001s
+
+# (Below are additional data)
 SEEDi = 0
 total cost of Main.F2SP is 11507.229762440573
 total cost of Main.TSSP is 10653.403486760875
@@ -136,4 +302,3 @@ total cost of Main.TSSP is 18746.14478959122
 SEEDi = 3
 total cost of Main.F2SP is 2739.424191173546
 total cost of Main.TSSP is 2631.412310867275
-# TODO
