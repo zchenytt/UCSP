@@ -245,16 +245,17 @@ function mst!(m, li0, zi0, S, xH, pAH, GD, LD, liD; θ_has_obj)
             elseif !xHˈzg1 && any(view(xHˈzg, 1:DT))
                 x0[z,g] = false
             else
-                x0[z,g], N = JuMP.@variable(m, lower_bound=0, upper_bound=1), N+1
+                x0[z,g], N = JuMP.@variable(m), N+1
             end
         end; Bv=fill(Cchar('C'),N)
     chk = (X=fill(NaN,N), Θ=fill(NaN,S), ul=fill(Inf,S+1)) # the "check" solution, where (X,Θ) are loaded directly
     # while ul is an additional storage space, ul[1:S] is Qy_values evaluated, Qˈy[S+1] is LB-of-mst (ObjBound)
     ast = (X=fill(NaN,N), ul=fill(Inf,S+1)) # store the current-best primal feasible solution
-    printstyled("master built with N=$N, S=$S, θ_has_obj=$θ_has_obj\n"; color = 30)
+    # printstyled("master built with N=$N, S=$S, θ_has_obj=$θ_has_obj\n"; color = 30)
     JuMP.@objective(m, Min, sum(θ_has_obj/S * i for i = θ))
     (; m, N, S, Bv, chk, ast)
 end
 
 end
+
 
