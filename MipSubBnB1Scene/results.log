@@ -1,0 +1,60 @@
+test> SEEDi = 2
+1 Nnow=1 (Depth=0), NchkCutOff=4; Nfrac=2, select=(39, 0.7715656835298098)
+2 Nnow=2 (Depth=1), NchkCutOff=0; Nfrac=1, select=(21, 0.12189400416282559)
+3 Nnow=3 (Depth=1), NchkCutOff=0; Nfrac=2, select=(12, 0.12765450546963097)
+4 Nnow=4 (Depth=2), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 3.0s, rgap=0.01.
+lb= 6170.002603294128, ub= 6187.360766869986, agap= 17.35816357585827, rgap= 0.002805422898370816
+Quit as a good Xast found
+lp_time=(0.0, 1.7), mip_time=(31.6, 3.2); Ncut_off=(2, 2); Npruned=0
+lb= 6170.002603294128, ub= 6187.360766869986, agap= 17.35816357585827, rgap= 0.002805422898370816
+
+test> SEEDi = 3
+1 Nnow=1 (Depth=0), NchkCutOff=13; Nfrac=2, select=(3, 0.8696770619720506)
+2 Nnow=2 (Depth=1), NchkCutOff=7; Nfrac=3, select=(17, 0.4183743036924472)
+3 Nnow=3 (Depth=1), NchkCutOff=5; Nfrac=3, select=(45, 0.5430888481120139)
+4 Nnow=4 (Depth=2), NchkCutOff=4; Nfrac=2, select=(45, 0.26888879284018424)
+5 Nnow=5 (Depth=2), NchkCutOff=1; Nfrac=2, select=(45, 0.753248827311964)
+6 Nnow=6 (Depth=2), NchkCutOff=5; Nfrac=3, select=(49, 0.25495521492676215)
+7 Nnow=7 (Depth=2), NchkCutOff=3; Nfrac=3, select=(48, 0.15710309847194326)
+8 Nnow=8 (Depth=3), NchkCutOff=3; Nfrac=1, select=(31, 0.059413414178790355)
+9 Nnow=16 (Depth=4), NchkCutOff=1; Nfrac=1, select=(19, 0.0036900304709231273)
+10 Nnow=18 (Depth=5), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 3.0s, rgap=0.01.
+lb= 1305.5159787068903, ub= 1339.3649892221633, agap= 33.849010515272994, rgap= 0.025272431926812434
+11 Nnow=9 (Depth=3), NchkCutOff=1; Nfrac=2, select=(31, 0.1664209607217943)
+12 Nnow=20 (Depth=4), NchkCutOff=0; Nfrac=1, select=(49, 0.19085152106623748)
+13 Nnow=22 (Depth=5), NchkCutOff=0; Nfrac=1, select=(55, 0.05764782293573518)
+14 Nnow=24 (Depth=6), NchkCutOff=0; Nfrac=1, select=(21, 0.866620055710146)
+15 Nnow=26 (Depth=7), NchkCutOff=0; Nfrac=1, select=(47, 0.0942711457419667)
+16 Nnow=28 (Depth=8), NchkCutOff=0; Nfrac=1, select=(23, 0.8559155260851747)
+17 Nnow=30 (Depth=9), NchkCutOff=0; Nfrac=1, select=(54, 0.0958962640165063)
+18 Nnow=32 (Depth=10), NchkCutOff=0; Nfrac=1, select=(48, 0.07345419770074314)
+19 Nnow=34 (Depth=11), NchkCutOff=0; Nfrac=1, select=(26, 0.7793979335540422)
+20 Nnow=36 (Depth=12), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 4.0s, rgap=0.01.
+lb= 1305.5159787068903, ub= 1327.713705336968, agap= 22.197726630077568, rgap= 0.01671875988087649
+21 Nnow=10 (Depth=3), NchkCutOff=0; Nfrac=2, select=(49, 0.6061314558744846)
+22 Nnow=38 (Depth=4), NchkCutOff=0; Nfrac=1, select=(31, 0.11169881167123248)
+23 Nnow=40 (Depth=5), NchkCutOff=0; Nfrac=1, select=(19, 0.09294549585366382)
+24 Nnow=42 (Depth=6), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 2.0s, rgap=0.01.
+lb= 1305.5159787068903, ub= 1319.656472423916, agap= 14.14049371702572, rgap= 0.010715283873122504
+25 Nnow=11 (Depth=3), NchkCutOff=3; Nfrac=1, select=(31, 0.07946770458180821)
+26 Nnow=44 (Depth=4), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 3.0s, rgap=0.01.
+27 Nnow=12 (Depth=3), NchkCutOff=0; Nfrac=2, select=(17, 0.6042150401443045)
+28 Nnow=46 (Depth=4), NchkCutOff=0; Nfrac=1, select=(31, 0.003564335598480962)
+29 Nnow=48 (Depth=5), NchkCutOff=0; Nfrac=1, select=(19, 0.003046162361991687)
+30 Nnow=50 (Depth=6), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 4.0s, rgap=0.01.
+31 Nnow=13 (Depth=3), NchkCutOff=0; Nfrac=2, select=(17, 0.744348548096366)
+32 Nnow=52 (Depth=4), NchkCutOff=0; Nfrac=1, select=(31, 0.0575727133935589)
+33 Nnow=54 (Depth=5), NchkCutOff=0; Nfrac=1, select=(19, 0.049200199315981435)
+34 Nnow=56 (Depth=6), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 3.0s, rgap=0.01.
+Node 14 pruned, NchkCutOff= 0
+Node 15 pruned, NchkCutOff= 0
+Quit as all nodes are closed.
+lp_time=(0.0, 4.3), mip_time=(302.5, 18.1); Ncut_off=(10, 36); Npruned=2
+lb= 1305.8974451759539, ub= 1319.656472423916, agap= 13.759027247962194, rgap= 0.01042621889520226
