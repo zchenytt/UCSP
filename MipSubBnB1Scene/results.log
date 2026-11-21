@@ -58,3 +58,20 @@ Node 15 pruned, NchkCutOff= 0
 Quit as all nodes are closed.
 lp_time=(0.0, 4.3), mip_time=(302.5, 18.1); Ncut_off=(10, 36); Npruned=2
 lb= 1305.8974451759539, ub= 1319.656472423916, agap= 13.759027247962194, rgap= 0.01042621889520226
+
+test> SEEDi = -123
+1 Nnow=1 (Depth=0), NchkCutOff=8; Nfrac=1, select=(17, 0.6074536616129397)
+2 Nnow=2 (Depth=1), NchkCutOff=2; Nfrac=1, select=(20, 0.04436348896308076)
+3 Nnow=3 (Depth=1), NchkCutOff=1; Nfrac=1, select=(35, 0.041054331254466794)
+4 Nnow=4 (Depth=2), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 4.0s, rgap=0.01.
+lb= 1278.1799376337028, ub= 1308.674596107127, agap= 30.494658473424124, rgap= 0.023301941188539628
+Node 5 pruned, NchkCutOff= 1
+6 Nnow=6 (Depth=2), NchkCutOff=1; Nfrac=1, select=(22, 0.0004862534911895637)
+Node 7 pruned, NchkCutOff= 3
+8 Nnow=8 (Depth=3), NchkCutOff=0; Nfrac=0, select=(0, 0.0)
+Eval: Finished in 3.0s, rgap=0.01.
+Node 9 pruned, NchkCutOff= 0
+Quit as all nodes are closed.
+lp_time=(0.0, 3.3), mip_time=(81.1, 7.0); Ncut_off=(6, 10); Npruned=3
+lb= 1278.2072471214933, ub= 1308.674596107127, agap= 30.467348985633635, rgap= 0.023281073137863224
