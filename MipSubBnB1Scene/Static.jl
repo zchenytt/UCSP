@@ -100,8 +100,12 @@ function get_History!(m, rng, li0, zi0, F, liD, LD, GD, WN)
     ter == JuMP.OPTIMAL || (println("You should regenerate a physic case"); return xH,pAH)
     pA, x = m[:pA], m[:x]
     for (z,v)=enumerate(uH), (g,bv)=enumerate(v)
-        pAH[z][g] = JuMP.value(pA[z,g])
-        if round(Bool, JuMP.value(x[z,g]))
+        # 🟩🟧 Attention: whenever use the output result of one solve as the input to another solve,
+        # you have to correct the result with Julia functions
+        # otherwise the downstream solve may become strangly infeasible
+        xBval = round(Bool, JuMP.value(x[z,g]))
+        pAH[z][g] = xBval * JuMP.value(pA[z,g])
+        if xBval
             if rand(rng) ≤ .9
                 j = rand(rng, eachindex(bv))
                 xH[z][g][1:j] .= bv[j] = true
