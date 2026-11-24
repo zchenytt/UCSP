@@ -2,7 +2,7 @@
 implement the sync algorithm
 """
 module SyncAlgo
-import ..Ops, JuMP, ..Sin_Tha_Models, ..Sin_Tha_Cgen
+import ..Ops, ..Sin_Tha_Models, ..Sin_Tha_Cgen, JuMP
 
 function explore_node!(ND, Nnow, ubs, Xres, nnt, new_m, li0, zi0, S, xH, pAH, GD, LD, liD, ato)
     (lbv, ubv), vCut, sTr, NDˈS = ND.r[Nnow].b, ND.r[Nnow].c, ND.s[Nnow], ND.S
