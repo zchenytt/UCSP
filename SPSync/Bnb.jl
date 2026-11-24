@@ -82,11 +82,13 @@ function new_a_node!(ND, Nnow, iBr, b, use_sB)
     haskey(ND.nc, k) ? push!(ND.nc[k], N) : (ND.nc[k] = [N])
     N
 end
-function pick_an_open_node(ND, srchMod)
-    f, (; nc, o) = ifelse(srchMod, reverse, identity), ND
-    for l=f(0:maximum(keys(nc))), n=sort!(nc[l])
-        o[n] && return n
-    end;  return N_Dumb
+function pick_an_open_node(ND, Nnxt)
+    Nnxt == 0 || return Nnxt
+    (; l, o), K, V = ND, N_Dumb, Inf
+    for (k,v) = l
+        (o[k] && v < V) && ((K, V) = (k, v))
+    end
+    K
 end
 function log_gaps(lb, ub; color = 52)
     agap = ub - lb
