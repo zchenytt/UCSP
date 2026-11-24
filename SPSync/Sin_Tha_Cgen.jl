@@ -3,6 +3,7 @@ functions to generate all kinds of cuts
 """
 module Sin_Tha_Cgen
 import ..Ops, JuMP
+const CutRTol = (b = .03, s = .001) # Ben 3%, sB .5%
 
 function load_mst_sol!(m)
     m.chk.Θ[1] = JuMP.objective_value(m.m)
@@ -57,7 +58,7 @@ function Ben_attempt!(vCut, lbv, ubv, m, nˈtˈ1, ato, NDˈS)
     end # Here, Pi is derived. And it also applies to sB slope
     ub = Pi'X + Cn; Vio_s = ub - Θ[1]; rgapCut = abs(Vio_s / ub)
     # println("Ben> Vio_s = $Vio_s, rgapCut = $rgapCut")
-    if (addBcut = rgapCut > Ops.CutRTol.b && Vio_s > 0)
+    if (addBcut = rgapCut > CutRTol.b && Vio_s > 0)
         push!(vCut, push!(collect(Pi), Cn))
         Cd[N+1]=-1; Ops.add_le_constr!(m.m.moi_backend, N+1, n1.Ci, Cd, -Cn)
     end
@@ -73,7 +74,7 @@ function sB_attempt!(vCut, lbv, ubv, m, nˈt, ato, NDˈS)
     (; Θ, X) = m.chk
     ub = Pi'X + Cn; Vio_s = ub - Θ[1]; rgapCut = abs(Vio_s / ub)
     # println("sB> Vio_s = $Vio_s, rgapCut = $rgapCut")
-    if (add_sB = rgapCut > Ops.CutRTol.s && Vio_s > 0)
+    if (add_sB = rgapCut > CutRTol.s && Vio_s > 0)
         push!(vCut, push!(collect(Pi), Cn))
         Cd[N+1]=-1; Ops.add_le_constr!(m.m.moi_backend, N+1, n1.Ci, Cd, -Cn)
     end
