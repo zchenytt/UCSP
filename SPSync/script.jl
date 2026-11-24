@@ -7,10 +7,10 @@ include("src/Sin_Tha_Models.jl");
 include("src/Sin_Tha_Cgen.jl");
 include("src/SyncAlgo.jl");
 import JuMP, Random
-R = 7;
+R = 3;
 function test(SEEDi)
     println("\ntest> SEEDi = $SEEDi")
-    T, S = 23, 127;
+    T, S = 23, 2000
     rng = Random.Xoshiro(SEEDi);
     LD = Case2383.get_load(rng, Case2383.CaD);
     GD = Case2383.get_gen(rng, Case2383.CaD);
@@ -22,33 +22,34 @@ function test(SEEDi)
     nnt = Sin_Tha_Models.prepare_nnt(S, li0, li1, zi0, T, S, xH, pAH, GD, LD, liD; solve_once = true);
     N = nnt.e[1].N;
     ND, MaxBrDepth = Bnb.NDT(N), 3;
-    ubs, Xast, Xres = Inf, fill(Inf, N), fill(Inf, N);
+    ubs, Xast, Xres, goodBit = Inf, fill(Inf, N), fill(Inf, N), false;
     ato = Threads.Atomic{Float64}(0)
-    srchMod = false # (true = attempt to find ub quickly; false = attempt to improve the least lb)
+    Nnxt = Bnb.N_Root # initially, explore Root
     for search = 1:typemax(Int)
-        (Nnow = Bnb.pick_an_open_node(ND, srchMod)) == Bnb.N_Dumb && (printstyled("Quit as all nodes are closed.\n"; color = 93); break)
+        (Nnow = Bnb.pick_an_open_node(ND, Nnxt)) == Bnb.N_Dumb && (printstyled("Quit as all nodes are closed.\n"; color = 93); break)
         NchkCutOff = SyncAlgo.explore_node!(ND, Nnow, ubs, Xres, nnt, Ops.Model(), li0, zi0, S, xH, pAH, GD, LD, liD, ato)
+        Nnxt = 0 # default is to strengthen least lb
         ND.o[Nnow] || (printstyled("Node $Nnow pruned, NchkCutOff= $NchkCutOff\n"; color=34); continue)
         (iBr, vBr, Nfrac), NxFixed = Bnb.select_i_X(Xres, ND.r[Nnow].b), Bnb.nXfixed(ND.r[Nnow].b)
         println("$search Nnow=$Nnow (Depth=$NxFixed), NchkCutOff=$NchkCutOff; Nfrac=$Nfrac, select=($iBr, $(round(vBr;digits=2)))")
         if iBr == 0 # This Nnow node yields Int-Feas. Sol
             @. Xres = round(Xres); ub = SyncAlgo.get_valid_ub(Xres, nnt.e, S, ato, ND.S)
-            ND.o[Nnow] = srchMod = false
+            ND.o[Nnow] = false
             ub < ubs || continue # This solution is inferior
             Xast .= Xres # good enough to update incumbent
             ubs, glb = ub, Bnb.global_lb(ND)
             agap, rgap = Bnb.log_gaps(glb, ubs)
             (0≤agap && 0≤rgap<0.009) || continue
             printstyled("Quit as a good Xast found\n"; color = :magenta)
-            break # good enough to quit the algorithm
+            goodBit = true; break # good enough to quit the algorithm
         end
-        _, Nˈ2 = Bnb.branch_and_closeˈnonleaf_Nnow!(ND, Nnow, iBr, vBr, NchkCutOff > 0)
-        NxFixed ≥ MaxBrDepth && ((srchMod, ND.o[Nˈ2]) = (true, false))
+        Nˈ1, Nˈ2 = Bnb.branch_and_closeˈnonleaf_Nnow!(ND, Nnow, iBr, vBr, NchkCutOff > 0)
+        NxFixed < MaxBrDepth || ((Nnxt, ND.o[Nˈ2]) = (Nˈ1, false))
     end
     Bnb.log_stats(ND.S)
-    Bnb.log_gaps(Bnb.global_lb(ND), ubs; color = :magenta)
+    goodBit || Bnb.log_gaps(Bnb.global_lb(ND), ubs; color = :magenta)
 end;
-test_rem(R) = for i = 10000:30000
+test_rem(R) = for i = 20000:40000
     i % 10 == R && test(i)
 end;
 test_rem(R)
