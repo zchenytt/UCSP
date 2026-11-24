@@ -2,21 +2,21 @@
 prototype models
 """
 module Sin_Tha_Models
-import Random, JuMP, ..Case2383, ..TS, ..Ops
+import ..Case2383, ..TS, ..Ops, Random, JuMP
 const SubTy = @NamedTuple{s::Int64, m::JuMP.Model, N::Int64, Xl::Vector{Float64}, rC::Vector{Float64}, HRZ::UnitRange{Int64}, T::Int64, Ci::Vector{Int32}, Cd::Vector{Float64}}
 const UpResZones = 1:4
 const ϖCostCoeff, ζ2ϖCostRatio = 2.0, 25
 const urShortage2linCmaxRatio = 10
 
-function prepare_nnt(S, a...)
+function prepare_nnt(S, a...; solve_once = false)
     eNt = (t= (Ops.Env(S), Ops.Env(S)), e= Ops.Env(S))
     TyP = JuMP.Model;nNt = (t= map(x -> similar(x,TyP), eNt.t), e= similar(eNt.e,TyP))
     TyP = SubTy;     nnt = (t= map(x -> similar(x,TyP), eNt.t), e= similar(eNt.e,TyP))
     Ops.Model!(nNt.e, eNt.e); Ops.Model!(nNt.t[1], eNt.t[1]); Ops.Model!(nNt.t[2], eNt.t[2])
     Threads.@threads for s = 1:S
-        proto!(nnt.t[1], s, nNt.t[1][s], a...; binary=false)
-        proto!(nnt.t[2], s, nNt.t[2][s], a...; binary=true)
-        proto!(nnt.e   , s, nNt.e[s],    a...; binary=true)
+        proto!(nnt.t[1], s, nNt.t[1][s], a...; binary=false, solve_once=solve_once)
+        proto!(nnt.t[2], s, nNt.t[2][s], a...; binary=true, solve_once=solve_once)
+        proto!(nnt.e   , s, nNt.e[s],    a...; binary=true, solve_once=solve_once)
     end
     nnt
 end
@@ -41,6 +41,7 @@ end
 Ψ(k, S, s) = (k)S + s
 function proto!(vEc, s, m, li0, li1, zi0, T, S, xH, pAH, GD, LD, liD;
     binary,
+    solve_once=false,
     urShortage2linCmaxRatio=urShortage2linCmaxRatio,
     ϖCostCoeff=ϖCostCoeff,
     ζ2ϖCostRatio=ζ2ϖCostRatio,
@@ -239,6 +240,7 @@ function proto!(vEc, s, m, li0, li1, zi0, T, S, xH, pAH, GD, LD, liD;
     JuMP.@constraint(m, [z=UpResZones, i=HRZ], rgp[i][z] + ua[z,i] ≥ 0)
     JuMP.@constraint(m, [i=HRZ], egp[i] == 0)
     addPfLim && JuMP.@constraint(m, [l=lines, i=HRZ], pfe[i][l] == pf[l,i])
+    solve_once && JuMP.optimize!(m) # so that your Stats time won't include warm-up time
     for (ji, gi) = zip(eachindex(Ci), 1:N)
         Ci[ji] = gi
     end; Ci[N+1] = 0
