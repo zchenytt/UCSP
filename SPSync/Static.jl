@@ -2,13 +2,14 @@
 This module is only for generating the history trajectories
 """
 module Static
-import JuMP, ..Case2383, ..TS
+import Random, JuMP, ..Case2383, ..TS
 
+const UpResZones = 1:4
 _0() = JuMP.AffExpr()
 _1(rng) = rand(rng, 5.0:1e-4:8.0)
 _3(rng) = rand(rng, 0.5:1e-4:1.5)
 
-function Model!(m, rng, li0, zi0, F, liD, LD, GN, WN, GMax, Gmin)
+function Model!(m, rng, li0, zi0, F, liD, LD, GN, WN, GMax, Gmin, GEO_LOAD, r1r2c1c2i1i2, LoadYr)
     lines = keys(liD)
     LDˈi, LDˈg, LDˈn = LD.i, LD.g, LD.n
     pfe, egp, rgp = Dict(k=>_0() for k=lines), _0(), [_0() for z=1:4]
@@ -22,26 +23,45 @@ function Model!(m, rng, li0, zi0, F, liD, LD, GN, WN, GMax, Gmin)
     end)
     JuMP.@constraint(m, [z=eachindex(GN), g=eachindex(GN[z])], 
         pA[z,g]+ur[z,g] ≤ (GMax[z][g]-Gmin[z][g])x[z,g])
-    #= Load =# lfra = TS.LoadYr[li0]; for (z,v)=enumerate(LDˈg)
-        ζˈz = ζ[z] # load shed
-        1≤z≤4 && (rˈz = rgp[z]) 
-        for (g,p)=enumerate(v)
-            Ty, n = LDˈi[z][g], LDˈn[z][g]
-            load = lfra * p # time-variant
-            JuMP.add_to_expression!(egp, -load)
-            JuMP.add_to_expression!(egp, load, ζˈz)
-            if 1≤z≤4
+    #= Load =#
+        if GEO_LOAD !== nothing
+            for (z,v)=enumerate(LDˈg), (g,p)=enumerate(v)
+                L01ˈvec, node = r1r2c1c2i1i2[LDˈi[z][g]], LDˈn[z][g]
+                load = (p)L01ˈvec[li0] # time_and_geo-variant
                 upResDemand = 0.03 * load
-                JuMP.add_to_expression!(rˈz, -upResDemand)
-                JuMP.add_to_expression!(rˈz, upResDemand, ζˈz)
+                JuMP.add_to_expression!(egp, -load)
+                JuMP.add_to_expression!(egp, load, ζ[z])
+                z ∈ UpResZones && JuMP.add_to_expression!(rgp[z], -upResDemand)
+                z ∈ UpResZones && JuMP.add_to_expression!(rgp[z], upResDemand, ζ[z])
+                for l=lines
+                    Cnl, pfl = F[l,node], pfe[l]
+                    JuMP.add_to_expression!(pfl, Cnl * -load)
+                    JuMP.add_to_expression!(pfl, Cnl * load, ζ[z])
+                end
             end
-            for l=lines
-                Cnl, pfl = F[l,n], pfe[l]
-                JuMP.add_to_expression!(pfl, Cnl * -load)
-                JuMP.add_to_expression!(pfl, Cnl * load, ζˈz)
+        else # no load_geo_discrepancy
+            lfra = LoadYr[li0]
+            for (z,v)=enumerate(LDˈg)
+                ζˈz = ζ[z] # load shed
+                z ∈ UpResZones && (rˈz = rgp[z]) 
+                for (g,p)=enumerate(v)
+                    n = LDˈn[z][g]
+                    load = lfra * p # time-variant
+                    JuMP.add_to_expression!(egp, -load)
+                    JuMP.add_to_expression!(egp, load, ζˈz)
+                    if z ∈ UpResZones
+                        upResDemand = 0.03 * load
+                        JuMP.add_to_expression!(rˈz, -upResDemand)
+                        JuMP.add_to_expression!(rˈz, upResDemand, ζˈz)
+                    end
+                    for l=lines
+                        Cnl, pfl = F[l,n], pfe[l]
+                        JuMP.add_to_expression!(pfl, Cnl * -load)
+                        JuMP.add_to_expression!(pfl, Cnl * load, ζˈz)
+                    end
+                end
             end
         end
-    end
     #= wind =# for (z,v)=enumerate(Case2383.WindP)
         ze = if z == 1
             TS.ze1
@@ -67,9 +87,9 @@ function Model!(m, rng, li0, zi0, F, liD, LD, GN, WN, GMax, Gmin)
         end
     end
     for (z,v)=enumerate(Gmin)
-        1≤z≤4 && (rˈz = rgp[z])
+        z ∈ UpResZones && (rˈz = rgp[z])
         for (g,pmin)=enumerate(v)
-            1≤z≤4 && JuMP.add_to_expression!(rˈz, ur[z,g])
+            z ∈ UpResZones && JuMP.add_to_expression!(rˈz, ur[z,g])
             JuMP.add_to_expression!(egp, pmin, x[z,g])
             JuMP.add_to_expression!(egp, pA[z,g])
             n = GN[z][g]
@@ -88,13 +108,13 @@ function Model!(m, rng, li0, zi0, F, liD, LD, GN, WN, GMax, Gmin)
     JuMP.@objective(m, Min, sum(_1(rng)i for i=x) + sum(_3(rng)i for i=pA))
 end
 
-function get_History!(m, rng, li0, zi0, F, liD, LD, GD, WN)
+function get_History!(m, rng, li0, zi0, F, liD, LD, GD, WN, GEO_LOAD, r1r2c1c2i1i2, LoadYr)
     GDˈUT = GD.UT
     uL = max(maximum(maximum, GDˈUT),maximum(maximum, GD.DT))-1 # uH is not only for `u` but also for `v`
     uH =  [[falses(uL  ) for _=v] for v=GDˈUT]
     xH =  [[falses(uL+1) for _=v] for v=GDˈUT]
     pAH = [[NaN          for _=v] for v=GDˈUT]
-    Model!(m, rng, li0, zi0, F, liD, LD, GD.n, WN, GD.pmax, GD.pmin)
+    Model!(m, rng, li0, zi0, F, liD, LD, GD.n, WN, GD.pmax, GD.pmin, GEO_LOAD, r1r2c1c2i1i2, LoadYr)
     JuMP.optimize!(m)
     ter = JuMP.termination_status(m)
     ter == JuMP.OPTIMAL || (println("You should regenerate a physic case"); return xH,pAH)
