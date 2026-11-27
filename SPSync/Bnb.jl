@@ -51,7 +51,6 @@ function global_lb(ND)
     for (k,v)=ND.e  v && (lb = min(lD[k], lb)) end
     lb == Inf ? error("global_lb == Inf") : return lb 
 end
-
 function select_i_X(Xres, NDˈrˈb)
     (lbv, ubv), (ib, Xb, dmin), Nf = NDˈrˈb, (0, 0., Inf), 0
     for ((i,x), l, u) = zip(enumerate(Xres), lbv, ubv)
