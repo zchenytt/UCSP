@@ -3,10 +3,14 @@ module TS
 import JLD2, Random, LinearAlgebra, Distributions
 const Wind3DIR = "jld2data/wind3_dataset.jld2"
 const LoadYrDIR = "jld2data/hourly_load.jld2"
+const r1r2c1c2i1i2DIR = "jld2data/r1r2c1c2i1i2.jld2"
+
 logit(F) = log(F / (1-F))
 logistic(R) = 1/(1 + exp(-R))
-
 _load01(s) = (load_MW=JLD2.load(s)["v"]; load_MW ./= maximum(load_MW))
+getw01(w1) = w1 / maximum(w1);
+open01(x) = clamp(x, 0.0001, 0.9999);
+w2z = logit ∘ open01;
 function _z1z2z3(s)
     d = JLD2.load(s)
     W1, W2, W3 = div_k(d["w1"]), div_k(d["w2"]), div_k(d["w3"])
@@ -27,9 +31,7 @@ function div_k(w; k=4) # convert 15-min wind series to hourly ones
     end
     v
 end
-getw01(w1) = w1 / maximum(w1);
-open01(x) = clamp(x, 0.0001, 0.9999);
-w2z = logit ∘ open01;
+
 "z[t+1] = bias + (phi)z[t] + eps_t = (1-phi)mean + (phi)z[t] + eps_t; where, mean is the long-term steady value"
 function get_bias_phi(z) # Least Squares Estimation
     S = length(z) - 1
@@ -65,14 +67,19 @@ function get_wind_params(z1, z2, z3)
     bvec = [b1, b2, b3]
     φ, b, D = phi, bvec, Distributions.MvNormal(cov_mat)
 end
-
-const LoadYr = _load01(LoadYrDIR) # 1-year time series
+function load_patterns(GEO_LOAD)
+    c = GEO_LOAD !== nothing
+    r1r2c1c2i1i2 = c ? first(JLD2.load(r1r2c1c2i1i2DIR)).second : nothing # # (r1, r2, c1, c2, i1, i2) 3-week load curves
+    LoadYr = c ? nothing : _load01(LoadYrDIR) # 1-year time series
+    return r1r2c1c2i1i2, LoadYr
+end
 const z1, z2, z3, ze1, ze2, ze3 = _z1z2z3(Wind3DIR) # z's (real-number) series; We need these since AR is defined on it!
 const φ, b, D = get_wind_params(z1, z2, z3) # AR(1) param on `z`
 const μ01 = @. logistic(b / (1 - φ)) # (timeless mean windgen) will be used in Reserve Data input calculation
-def_t0_indices(rng) = (rand(rng, 1:8760), rand(rng, 1:73)) # li0, zi0 (zei0)
-
+function def_t0_indices(rng, GEO_LOAD) # li0, zi0 (zei0)
+    n = GEO_LOAD !== nothing ? 360 : 8760
+    rand(rng, 1:n), rand(rng, 1:73)
+end
 ar(ϵv, zone, z) = b[zone] + φ[zone]z + ϵv[zone]
-
 
 end
