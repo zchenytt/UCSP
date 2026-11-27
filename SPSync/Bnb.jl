@@ -2,6 +2,8 @@ module Bnb
 
 const N_Dumb, N_Root = 0, 1
 mutable struct Stats
+    lb::Float64 # final lower bound, to be logged
+    ub::Float64 # final upper bound, to be logged
     tm::Float64 # time spent on solving LP masters
     tn::Float64 # time spent on solveing LP subproblems
     tsb::Float64 # time spent on MIP subproblems to generate SB cuts
@@ -41,7 +43,7 @@ struct NDT # a general info bundle
         Dict(N_Root => true),
         Dict(N_Root => Inf), # lb=Inf is deemed invalid
         Dict(N_Root => BnBNodeRef(N_Dumb, (fill(0.,N), fill(1.,N)), Vector{Float64}[])),
-        Stats(0.,0.,0.,0.,0,0,0)
+        Stats(NaN, NaN, 0.,0.,0.,0.,0,0,0)
     )
 end
 # This function is used to label new nodes
@@ -92,7 +94,9 @@ end
 function log_gaps(lb, ub; color = 52)
     agap = ub - lb
     rgap = agap / ub
-    printstyled("lb= $lb, ub= $ub, agap= $agap, rgap= $rgap\n"; color = color)
+    let lb = round(lb; digits=1), ub = round(ub; digits=1), agap = round(agap; digits=1), rgap = round(rgap; digits=5)
+        printstyled("lb= $lb, ub= $ub, agap= $agap, rgap= $rgap\n"; color = color)
+    end
     agap, rgap
 end
 
