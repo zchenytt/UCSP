@@ -29,7 +29,7 @@ struct Bbyz
     P::Dict{Int, Float64} # explicitly extract PfMax for type stability
     Bbyz(N)=new([Int[] for _=1:N-1], Matrix{Vector{Int}}(undef,N,N), Dict{Int, Float64}())
 end
-function branch_by_zone(CaD; PfK=1.0)
+function branch_by_zone(CaD)
     o = Bbyz(6)
     CaDˈbus, CaDˈbr = CaD["bus"], CaD["branch"]
     for i=1:length(CaDˈbr)
@@ -38,7 +38,7 @@ function branch_by_zone(CaD; PfK=1.0)
         f,t = CaDˈbus[string(f)]["zone"],CaDˈbus[string(t)]["zone"]
         f == t && continue
         # Now here are the lines that are inter-zone
-        o.P[i] = PfK * CaDˈbrˈi["rate_a"]
+        o.P[i] = CaDˈbrˈi["rate_a"] # This reading process should not be scaled
         f,t = min(f,t), max(f,t)
         if t in o.v[f]
             push!(o.m[f,t], i)
