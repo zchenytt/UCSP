@@ -1,6 +1,3 @@
-"""
-This monolithic formulation is just a quick derivative from the `proto` subproblem in `Sin_Tha_Models.jl`
-"""
 module Mono
 import ..Case2383, ..TS, ..Ops, ..Sin_Tha_Models, Random, JuMP
 const UpResZones = 1:4
@@ -14,7 +11,7 @@ function get_a_2SSP_result(S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1
     ter ∈ (JuMP.TIME_LIMIT, JuMP.OPTIMAL) || error("mono: $ter")
     GRB_lu = (JuMP.objective_bound(mono), JuMP.objective_value(mono))
     println("GRB_lu = $GRB_lu")
-    mono
+    GRB_lu
 end
 
 # adapted from the original
