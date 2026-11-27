@@ -1,25 +1,30 @@
-include("src/Bnb.jl");
-include("src/Ops.jl");
-include("src/Case2383.jl");
-include("src/TS.jl");
-include("src/Static.jl");
-include("src/Sin_Tha_Models.jl");
-include("src/Sin_Tha_Cgen.jl");
-include("src/SyncAlgo.jl");
+include("Bnb.jl");
+include("Ops.jl");
+include("Sin_Tha_Cgen.jl");
+include("Case2383.jl");
+include("TS.jl"); # takes an arg
+include("Static.jl"); # depends on TS
+include("Sin_Tha_Models.jl"); # depends on TS
+include("Mono.jl"); # depends on TS
+include("SyncAlgo.jl"); # depends on Sin_Tha_Models
+
 import JuMP, Random
-R = 3;
-function test(SEEDi)
-    println("\ntest> SEEDi = $SEEDi")
-    T, S = 23, 2000
-    rng = Random.Xoshiro(SEEDi);
+function gen_input_data(SEEDi, use_geo_load, T, PfK)
+    liD = Case2383.branch_by_zone(Case2383.CaD).P;
+    rng, GEO_LOAD = Random.Xoshiro(SEEDi), (use_geo_load ? true : nothing);
+    r1r2c1c2i1i2, LoadYr = TS.load_patterns(GEO_LOAD)
     LD = Case2383.get_load(rng, Case2383.CaD);
     GD = Case2383.get_gen(rng, Case2383.CaD);
-    liD = Case2383.branch_by_zone(Case2383.CaD).P;
-    li0, zi0 = TS.def_t0_indices(rng); # absolute location indices
-    li1 = li0 + 2(T+1)-1; # absolute terminal of planning: The last program is at li1-static
-    xH,pAH = Static.get_History!(Ops.Model(), rng, li0, zi0, Case2383.F, liD, LD, GD, Case2383.WindN);
+    li0, zi0 = TS.def_t0_indices(rng, GEO_LOAD); # absolute location indices
+    xH,pAH = Static.get_History!(Ops.Model(), rng, li0, zi0, Case2383.F, liD, LD, GD, Case2383.WindN, GEO_LOAD, r1r2c1c2i1i2, LoadYr)
     pAH[1][1] === NaN && return nothing
-    nnt = Sin_Tha_Models.prepare_nnt(S, li0, li1, zi0, T, S, xH, pAH, GD, LD, liD; solve_once = true);
+    for i=keys(liD) liD[i] *= PfK end
+    # start to build the 2SSP-Decomposition model
+    li1 = li0 + 2(T+1)-1; # absolute terminal of planning: The last program is at li1-static
+    li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr
+end;
+function get_a_2SSP_result(S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr)
+    nnt = Sin_Tha_Models.prepare_nnt(S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr; solve_once = true);
     N = nnt.e[1].N;
     ND, MaxBrDepth = Bnb.NDT(N), 3;
     ubs, Xast, Xres, goodBit = Inf, fill(Inf, N), fill(Inf, N), false;
@@ -27,11 +32,11 @@ function test(SEEDi)
     Nnxt = Bnb.N_Root # initially, explore Root
     for search = 1:typemax(Int)
         (Nnow = Bnb.pick_an_open_node(ND, Nnxt)) == Bnb.N_Dumb && (printstyled("Quit as all nodes are closed.\n"; color = 93); break)
-        NchkCutOff = SyncAlgo.explore_node!(ND, Nnow, ubs, Xres, nnt, Ops.Model(), li0, zi0, S, xH, pAH, GD, LD, liD, ato)
+        NchkCutOff = SyncAlgo.explore_node!(ND, Nnow, ubs, Xres, nnt, Ops.Model(), xH, pAH, GD, ato, S)
         Nnxt = 0 # default is to strengthen least lb
         ND.o[Nnow] || (printstyled("Node $Nnow pruned, NchkCutOff= $NchkCutOff\n"; color=34); continue)
         (iBr, vBr, Nfrac), NxFixed = Bnb.select_i_X(Xres, ND.r[Nnow].b), Bnb.nXfixed(ND.r[Nnow].b)
-        println("$search Nnow=$Nnow (Depth=$NxFixed), NchkCutOff=$NchkCutOff; Nfrac=$Nfrac, select=($iBr, $(round(vBr;digits=2)))")
+        # println("$search Nnow=$Nnow (Depth=$NxFixed), NchkCutOff=$NchkCutOff; Nfrac=$Nfrac, select=($iBr, $(round(vBr;digits=2)))")
         if iBr == 0 # This Nnow node yields Int-Feas. Sol
             @. Xres = round(Xres); ub = SyncAlgo.get_valid_ub(Xres, nnt.e, S, ato, ND.S)
             ND.o[Nnow] = false
@@ -49,7 +54,24 @@ function test(SEEDi)
     Bnb.log_stats(ND.S)
     goodBit || Bnb.log_gaps(Bnb.global_lb(ND), ubs; color = :magenta)
 end;
-test_rem(R) = for i = 20000:40000
-    i % 10 == R && test(i)
+test() = for S = (1, 5, 127, 2000), PfK = (.75, 1.), use_geo_load = (true, false)
+    GEO_LOAD = (use_geo_load ? true : nothing)
+    r1r2c1c2i1i2, LoadYr = TS.load_patterns(GEO_LOAD)
+    liD0 = Case2383.branch_by_zone(Case2383.CaD).P;
+    for SEEDi = 0:39
+        println("(S, PfK, GeoLoad) = ($S, $PfK, $use_geo_load) : SEEDi = $SEEDi")
+        liD = copy(liD0)
+        T = 23
+        rng = Random.Xoshiro(SEEDi)
+        LD = Case2383.get_load(rng, Case2383.CaD);
+        GD = Case2383.get_gen(rng, Case2383.CaD);
+        li0, zi0 = TS.def_t0_indices(rng, GEO_LOAD); # absolute location indices
+        xH,pAH = Static.get_History!(Ops.Model(), rng, li0, zi0, Case2383.F, liD, LD, GD, Case2383.WindN, GEO_LOAD, r1r2c1c2i1i2, LoadYr)
+        pAH[1][1] === NaN && continue
+        for i=keys(liD) liD[i] *= PfK end
+        li1 = li0 + 2(T+1)-1; # absolute terminal of planning: The last program is at li1-static
+        S < 6 && Mono.get_a_2SSP_result(S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr);
+        get_a_2SSP_result(S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr);   
+    end
 end;
-test_rem(R)
+test()
