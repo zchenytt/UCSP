@@ -7,8 +7,8 @@ const urShortage2linCmaxRatio = 10
 function get_a_2SSP_result(S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr)
     mono = proto!(Ops.Model(), S, T, li0, li1, zi0, xH, pAH, GD, LD, liD, r1r2c1c2i1i2, LoadYr);
     JuMP.set_time_limit_sec(mono, 120.)
-    JuMP.optimize!(mono); ter = JuMP.termination_status(mono)
-    ter ∈ (JuMP.TIME_LIMIT, JuMP.OPTIMAL) || error("mono: $ter")
+    JuMP.optimize!(mono)
+    Ops.assert_status(mono, JuMP.TIME_LIMIT, "mono_2ssp")
     GRB_lu = (JuMP.objective_bound(mono), JuMP.objective_value(mono))
     println("GRB_lu = $GRB_lu")
     GRB_lu
