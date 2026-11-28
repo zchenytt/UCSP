@@ -45,17 +45,20 @@ const GRB_CONFIG = Dict{String,Any}("Threads"=>1,"OutputFlag"=>0)
         Model!(mv, i, ev)
     end
 
-function assert_optimal(model, model_name)
-    t = JuMP.termination_status(model)
-    t == JuMP.OPTIMAL && return
+function log_status_error(model_name, t)
     s = string(model_name, ": ", t)
     @error(s); error(s)
 end
-function assert_nodelimit(model, model_name)
+
+function assert_status(model, js, model_name::String)
     t = JuMP.termination_status(model)
-    (t == JuMP.OPTIMAL || t == JuMP.NODE_LIMIT) && return
-    s = string(model_name, ": ", t)
-    @error(s); error(s)
+    c = isnothing(js) ? (t != JuMP.OPTIMAL) : (t != JuMP.OPTIMAL && t != js)
+    c ? log_status_error(model_name, t) : return
+end
+function assert_status(model, js1, js2, model_name::String)
+    t = JuMP.termination_status(model)
+    c = (t != JuMP.OPTIMAL && t != js1 && t != js2)
+    c ? log_status_error(model_name, t) : return
 end
 function printinfo()
     a,b,c,d = Threads.nthreads(:default),Threads.nthreads(:interactive),Threads.threadid(),Threads.threadpool()
