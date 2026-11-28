@@ -115,9 +115,10 @@ function get_History!(m, rng, li0, zi0, F, liD, LD, GD, WN, GEO_LOAD, r1r2c1c2i1
     xH =  [[falses(uL+1) for _=v] for v=GDˈUT]
     pAH = [[NaN          for _=v] for v=GDˈUT]
     Model!(m, rng, li0, zi0, F, liD, LD, GD.n, WN, GD.pmax, GD.pmin, GEO_LOAD, r1r2c1c2i1i2, LoadYr)
+    JuMP.set_time_limit_sec(m, 20.)
     JuMP.optimize!(m)
-    ter = JuMP.termination_status(m)
-    ter == JuMP.OPTIMAL || (println("You should regenerate a physic case"); return xH,pAH)
+    ter = JuMP.primal_status(m)
+    ter == JuMP.FEASIBLE_POINT || (println("You should regenerate a physic case"); return xH,pAH)
     pA, x = m[:pA], m[:x]
     for (z,v)=enumerate(uH), (g,bv)=enumerate(v)
         # 🟩🟧 Attention: whenever use the output result of one solve as the input to another solve,
