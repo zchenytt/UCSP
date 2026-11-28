@@ -38,7 +38,11 @@ function proto!(vEc, s, m, S, T, li0, li1, zi0, xH, pAH, GD, LD, liD,
     b_wd!(egp, pfe, rgp, Qˈy, rngW, HRZ, LKA, F, WN, lines, ϖCostCoeff, ϖ, li0, zi0) 
     _psys!(m, egp, pfe, rgp, Qˈy, lines, HRZ, pf, ua, urCshort, addPfLim)
     JuMP.@objective(m, Min, Qˈy) # 1. doesn't contain Const, 2. doesn't relate to xLink
-    solve_once && JuMP.optimize!(m) # so that your Stats time won't include warm-up time
+    if solve_once
+        binary && JuMP.set_time_limit_sec(m, 18.)
+        JuMP.optimize!(m) # so that your Stats time won't include warm-up time
+        Ops.assert_status(m, JuMP.TIME_LIMIT, "solve_once_just_after_built")
+    end
     Xl,rC,Ci,Cd=_d(N),_d(N),_i(N+2),_d(N+2)
     prepare_Ci_under_single_tha!(Ci, N)
     vEc[s] = (; s, m, N, Xl, rC, HRZ, T, Ci, Cd)
