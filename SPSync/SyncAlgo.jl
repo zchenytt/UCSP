@@ -19,13 +19,13 @@ function explore_node!(ND, Nnow, ubs, Xres, nnt, new_m, xH, pAH, GD, ato, S)
         Ops.add_le_constr!(m.m.moi_backend, N+1, Ci, Cd, -xBˈCn) # 🟩
     end
     if Needsˈinit
-        JuMP.optimize!(m.m); Ops.assert_optimal(m.m, "mst_ini"); Sin_Tha_Cgen.load_mst_sol!(m)
+        JuMP.optimize!(m.m); Ops.assert_status(m.m, nothing, "mst_ini"); Sin_Tha_Cgen.load_mst_sol!(m)
         Sin_Tha_Cgen.ini_cut_gen!(vCut, lbv, ubv, m, nnt.t[1], ato)
         Ops.set_obj_coeff!(m.m.moi_backend, 0, 1, [1.]) # 🟦
     end
     NchkCutOff = 0
     for cut_gen = 1:typemax(Int)
-        JuMP.optimize!(m.m); Ops.assert_optimal(m.m, "cutgen_mst"); Sin_Tha_Cgen.load_mst_sol!(m)
+        JuMP.optimize!(m.m); Ops.assert_status(m.m, nothing, "cutgen_mst"); Sin_Tha_Cgen.load_mst_sol!(m)
         NDˈS.tm += JuMP.solve_time(m.m)
         m.chk.Θ[1] > ubs && (ND.o[Nnow] = false; NDˈS.np += 1; break)
         NchkCutOff += Added = Sin_Tha_Cgen.Ben_attempt!(vCut, lbv, ubv, m, nnt.t[1], ato, NDˈS)
@@ -44,14 +44,16 @@ function explore_node!(ND, Nnow, ubs, Xres, nnt, new_m, xH, pAH, GD, ato, S)
     deleteat!(vCut, Mu .== 0)
     return NchkCutOff
 end
-function get_valid_ub(X, nˈe, S, ato, NDˈS; rgap = 0.01)
+function get_valid_ub(X, nˈe, S, ato, NDˈS; rgap = 0.01, runt = 180.)
     ato[] = 0.
     aTo = Threads.Atomic{Float64}(0)
     Threads.@threads for n = nˈe
         Ops.set_lb!(n.m.moi_backend, 0, length(X), X)
         Ops.set_ub!(n.m.moi_backend, 0, length(X), X)
         JuMP.set_attribute(n.m, "MIPGap", rgap)
-        JuMP.optimize!(n.m); Ops.assert_optimal(n.m, "eval_mip")
+        JuMP.set_attribute(n.m, "TimeLimit", runt)
+        JuMP.optimize!(n.m)
+        Ops.assert_status(n.m, JuMP.TIME_LIMIT, "eval_mip")
         Threads.atomic_max!(aTo, JuMP.solve_time(n.m))
         obv = JuMP.objective_value(n.m)
         Threads.atomic_add!(ato, obv/S)
