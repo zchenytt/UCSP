@@ -1,0 +1,1776 @@
+amd@amd:~/julia_projects/uc/Uc2$ julia  --threads=127,1 --project=. src/script.jl
+        S = 1, GeoLoad = 1, SEEDi = 0
+    PfK = 0.75
+GRB_lu = (5798.213043812087, 5798.7862476467635)
+lb= 5794.2, ub= 5800.8, agap= 6.6, rgap= 0.00114
+lp_time=(0.01037, 2.2), mip_time=(54.1, 3.7); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (4572.391919513919, 4572.845935386811)
+lb= 4569.0, ub= 4583.5, agap= 14.5, rgap= 0.00317
+lp_time=(0.00215, 1.6), mip_time=(35.8, 3.0); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 1
+    PfK = 0.75
+GRB_lu = (5088.901471772576, 5089.407053722786)
+lb= 5086.8, ub= 5093.8, agap= 7.0, rgap= 0.00138
+lp_time=(0.01422, 2.4), mip_time=(44.5, 3.7); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5067.122680080412, 5067.604085568274)
+lb= 5063.4, ub= 5075.3, agap= 11.9, rgap= 0.00235
+lp_time=(0.01509, 2.1), mip_time=(20.1, 2.2); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 2
+    PfK = 0.75
+GRB_lu = (12950.572109199526, 12951.861579709353)
+lb= 12949.0, ub= 12955.6, agap= 6.6, rgap= 0.00051
+lp_time=(0.00662, 1.2), mip_time=(44.5, 3.4); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (12713.776722076094, 12714.057058686845)
+lb= 12712.6, ub= 12714.0, agap= 1.3, rgap= 0.00011
+lp_time=(0.00051, 0.3), mip_time=(5.7, 2.0); Ncut_off=(1, 1); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 3
+    PfK = 0.75
+GRB_lu = (6123.260025188888, 6123.444948048747)
+lb= 6117.6, ub= 6124.8, agap= 7.2, rgap= 0.00118
+lp_time=(0.00973, 2.0), mip_time=(51.6, 4.6); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5976.995393180452, 5977.58142879817)
+lb= 5976.3, ub= 5985.9, agap= 9.5, rgap= 0.0016
+lp_time=(0.00376, 1.2), mip_time=(26.2, 3.5); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 4
+    PfK = 0.75
+GRB_lu = (5691.708917677228, 5692.232577166909)
+lb= 5689.7, ub= 5696.6, agap= 7.0, rgap= 0.00122
+lp_time=(0.00721, 4.1), mip_time=(63.0, 5.1); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5535.596606556001, 5536.133443345585)
+lb= 5531.9, ub= 5537.6, agap= 5.8, rgap= 0.00105
+lp_time=(0.00268, 2.5), mip_time=(29.7, 2.9); Ncut_off=(3, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 5
+    PfK = 0.75
+GRB_lu = (7428.563715960264, 7429.264943337628)
+lb= 7413.5, ub= 7434.6, agap= 21.1, rgap= 0.00283
+lp_time=(0.00906, 3.8), mip_time=(119.4, 4.7); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7027.241932372118, 7027.574402733649)
+lb= 7011.1, ub= 7051.0, agap= 39.9, rgap= 0.00565
+lp_time=(0.00131, 1.1), mip_time=(33.5, 3.8); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 6
+    PfK = 0.75
+GRB_lu = (11726.999881718788, 11727.176916649809)
+lb= 11703.8, ub= 11740.6, agap= 36.9, rgap= 0.00314
+lp_time=(0.0056, 0.8), mip_time=(56.4, 4.3); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (8298.978899544161, 8299.363781456028)
+lb= 8296.0, ub= 8303.8, agap= 7.8, rgap= 0.00094
+lp_time=(0.00132, 0.6), mip_time=(17.2, 2.1); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 7
+    PfK = 0.75
+GRB_lu = (6573.65023933743, 6574.301417028615)
+lb= 6560.7, ub= 6581.2, agap= 20.5, rgap= 0.00311
+lp_time=(0.00301, 1.6), mip_time=(69.9, 4.8); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6151.719950585429, 6152.146599776143)
+lb= 6148.6, ub= 6159.3, agap= 10.7, rgap= 0.00173
+lp_time=(0.00709, 1.4), mip_time=(30.4, 3.3); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 8
+    PfK = 0.75
+GRB_lu = (6819.665910496316, 6820.263800663511)
+lb= 6816.9, ub= 6824.4, agap= 7.5, rgap= 0.0011
+lp_time=(0.00912, 2.1), mip_time=(55.1, 3.3); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (6783.496838625847, 6784.1442879643455)
+lb= 6781.5, ub= 6784.3, agap= 2.7, rgap= 0.0004
+lp_time=(0.01295, 1.8), mip_time=(21.5, 2.6); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 9
+    PfK = 0.75
+GRB_lu = (13002.003846165926, 13003.294342916935)
+lb= 12999.0, ub= 13019.9, agap= 20.8, rgap= 0.0016
+lp_time=(0.01178, 1.6), mip_time=(68.2, 4.1); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (10967.894088093086, 10968.938663810777)
+lb= 10964.9, ub= 10972.8, agap= 7.9, rgap= 0.00072
+lp_time=(0.00246, 0.5), mip_time=(19.1, 2.2); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 10
+    PfK = 0.75
+GRB_lu = (7551.022555689516, 7551.734704739314)
+lb= 7546.8, ub= 7552.1, agap= 5.3, rgap= 0.0007
+lp_time=(0.00998, 1.5), mip_time=(31.4, 3.1); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7544.76807552161, 7545.4713027970065)
+lb= 7541.6, ub= 7545.5, agap= 3.9, rgap= 0.00052
+lp_time=(0.0168, 1.7), mip_time=(23.9, 2.5); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 11
+    PfK = 0.75
+GRB_lu = (7125.308158703551, 7125.90997022643)
+lb= 7122.9, ub= 7126.3, agap= 3.3, rgap= 0.00047
+lp_time=(0.00558, 2.7), mip_time=(54.6, 4.6); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7094.7864863944515, 7095.309479820372)
+lb= 7093.6, ub= 7097.6, agap= 4.0, rgap= 0.00056
+lp_time=(0.00238, 1.6), mip_time=(15.0, 3.8); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 12
+    PfK = 0.75
+GRB_lu = (6478.51256492986, 6479.117116086851)
+lb= 6456.4, ub= 6485.5, agap= 29.1, rgap= 0.00449
+lp_time=(0.00274, 1.9), mip_time=(67.7, 3.5); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (5827.006536153205, 5827.587800439216)
+lb= 5822.4, ub= 5828.3, agap= 6.0, rgap= 0.00102
+lp_time=(0.01026, 1.8), mip_time=(31.3, 2.6); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 13
+    PfK = 0.75
+GRB_lu = (5423.26932491542, 5423.744671978121)
+lb= 5408.1, ub= 5423.8, agap= 15.6, rgap= 0.00288
+lp_time=(0.01433, 3.9), mip_time=(109.4, 3.0); Ncut_off=(3, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (4959.820941034601, 4960.299799732051)
+lb= 4957.7, ub= 4962.6, agap= 5.0, rgap= 0.001
+lp_time=(0.00355, 1.5), mip_time=(35.8, 3.0); Ncut_off=(2, 5); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 14
+    PfK = 0.75
+GRB_lu = (5719.36860037334, 5719.9013671857465)
+lb= 5717.3, ub= 5720.3, agap= 3.0, rgap= 0.00053
+lp_time=(0.006, 2.0), mip_time=(38.7, 3.3); Ncut_off=(3, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (5624.066584010516, 5624.438941190017)
+lb= 5622.5, ub= 5625.9, agap= 3.4, rgap= 0.00061
+lp_time=(0.01391, 1.9), mip_time=(31.0, 2.4); Ncut_off=(1, 4); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 15
+    PfK = 0.75
+GRB_lu = (6888.557108798741, 6888.980801605505)
+lb= 6887.8, ub= 6899.4, agap= 11.6, rgap= 0.00168
+lp_time=(0.00612, 1.9), mip_time=(59.0, 5.1); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (6846.918208071184, 6847.391710899421)
+lb= 6844.8, ub= 6849.5, agap= 4.7, rgap= 0.00069
+lp_time=(0.00363, 1.1), mip_time=(35.0, 3.8); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 16
+    PfK = 0.75
+GRB_lu = (8640.640428476148, 8641.450151560817)
+lb= 8636.1, ub= 8642.6, agap= 6.5, rgap= 0.00075
+lp_time=(0.01163, 2.4), mip_time=(73.7, 4.3); Ncut_off=(3, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (8217.297331156795, 8217.800923279912)
+lb= 8216.8, ub= 8218.7, agap= 1.9, rgap= 0.00024
+lp_time=(0.0075, 1.6), mip_time=(46.4, 3.5); Ncut_off=(1, 9); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 17
+    PfK = 0.75
+GRB_lu = (5642.182284608431, 5642.736857226291)
+lb= 5636.7, ub= 5691.1, agap= 54.4, rgap= 0.00956
+lb= 5636.7, ub= 5667.4, agap= 30.6, rgap= 0.00541
+lp_time=(0.01276, 2.0), mip_time=(147.0, 8.1); Ncut_off=(1, 14); Npruned=0
+    PfK = 1.0
+GRB_lu = (5366.184805617354, 5366.717294134346)
+lb= 5366.0, ub= 5366.7, agap= 0.7, rgap= 0.00014
+lp_time=(0.0009, 0.6), mip_time=(14.1, 2.2); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 18
+    PfK = 0.75
+GRB_lu = (7913.5170814717285, 7914.296011519385)
+lb= 7907.3, ub= 7940.0, agap= 32.7, rgap= 0.00412
+lp_time=(0.00565, 1.5), mip_time=(60.2, 4.6); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7810.045986249188, 7810.803557221901)
+lb= 7805.0, ub= 7812.6, agap= 7.6, rgap= 0.00098
+lp_time=(0.00112, 0.9), mip_time=(11.0, 2.8); Ncut_off=(2, 1); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 19
+    PfK = 0.75
+GRB_lu = (13192.928708943948, 13193.63274662405)
+lb= 13189.6, ub= 13196.1, agap= 6.5, rgap= 0.00049
+lp_time=(0.00557, 0.9), mip_time=(39.2, 3.8); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (9768.026118920929, 9768.498651362426)
+lb= 9748.6, ub= 9768.5, agap= 19.9, rgap= 0.00204
+lp_time=(0.00297, 1.1), mip_time=(50.6, 2.3); Ncut_off=(1, 4); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 20
+    PfK = 0.75
+GRB_lu = (8247.300826473016, 8247.475586342742)
+lb= 8242.6, ub= 8249.5, agap= 6.8, rgap= 0.00083
+lp_time=(0.01601, 1.9), mip_time=(24.4, 4.2); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (8247.297980714688, 8247.47558634274)
+lb= 8243.9, ub= 8247.5, agap= 3.6, rgap= 0.00043
+lp_time=(0.00865, 1.5), mip_time=(19.1, 2.4); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 21
+    PfK = 0.75
+GRB_lu = (6995.746096074759, 6996.191486302118)
+lb= 6992.9, ub= 7005.9, agap= 13.0, rgap= 0.00185
+lp_time=(0.00444, 2.8), mip_time=(61.0, 4.4); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6375.686908972751, 6375.977106565833)
+lb= 6371.7, ub= 6377.9, agap= 6.1, rgap= 0.00096
+lp_time=(0.00475, 1.3), mip_time=(24.6, 3.4); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 22
+    PfK = 0.75
+GRB_lu = (10212.398777486818, 10213.390972971796)
+lb= 10205.3, ub= 10213.3, agap= 8.0, rgap= 0.00078
+lp_time=(0.00055, 0.5), mip_time=(12.8, 2.6); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (10205.44307296082, 10206.344329296702)
+lb= 10201.1, ub= 10208.7, agap= 7.6, rgap= 0.00074
+lp_time=(0.00213, 0.7), mip_time=(29.7, 2.1); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 23
+    PfK = 0.75
+GRB_lu = (6970.3895841117555, 6970.9376557007035)
+lb= 6967.5, ub= 6974.0, agap= 6.6, rgap= 0.00094
+lp_time=(0.00789, 2.0), mip_time=(40.6, 4.6); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6943.757470328032, 6944.438905950478)
+lb= 6939.4, ub= 6945.1, agap= 5.6, rgap= 0.00081
+lp_time=(0.00998, 1.5), mip_time=(27.0, 3.5); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 24
+    PfK = 0.75
+GRB_lu = (7810.652186016356, 7811.234287985351)
+lb= 7798.9, ub= 7812.2, agap= 13.2, rgap= 0.0017
+lp_time=(0.00313, 1.1), mip_time=(42.1, 3.1); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7584.464969166524, 7584.95189007256)
+lb= 7580.5, ub= 7586.6, agap= 6.1, rgap= 0.00081
+lp_time=(0.00811, 2.0), mip_time=(23.8, 3.4); Ncut_off=(1, 5); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 25
+    PfK = 0.75
+GRB_lu = (9338.484524384712, 9339.158066119475)
+lb= 9328.4, ub= 9347.2, agap= 18.8, rgap= 0.00201
+lp_time=(0.00342, 1.2), mip_time=(58.4, 4.3); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (7722.423895319516, 7723.11170076288)
+lb= 7721.6, ub= 7723.1, agap= 1.5, rgap= 0.00019
+lp_time=(0.00167, 1.1), mip_time=(14.6, 2.4); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 26
+    PfK = 0.75
+GRB_lu = (9244.47080564754, 9245.378380591834)
+lb= 9238.8, ub= 9245.5, agap= 6.7, rgap= 0.00072
+lp_time=(0.00057, 0.3), mip_time=(9.4, 2.8); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (9011.448595407994, 9012.185085578134)
+lb= 9005.3, ub= 9014.3, agap= 9.0, rgap= 0.00099
+lp_time=(0.00132, 0.4), mip_time=(18.5, 2.2); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 27
+    PfK = 0.75
+GRB_lu = (5953.82285662834, 5954.18339182571)
+lb= 5952.3, ub= 5954.8, agap= 2.5, rgap= 0.00042
+lp_time=(0.00231, 1.3), mip_time=(46.9, 3.2); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5739.937585743586, 5740.248246600888)
+lb= 5737.4, ub= 5741.6, agap= 4.2, rgap= 0.00073
+lp_time=(0.01134, 1.8), mip_time=(26.7, 3.0); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 28
+    PfK = 0.75
+GRB_lu = (5377.399838088689, 5377.912748863711)
+lb= 5373.2, ub= 5385.2, agap= 12.0, rgap= 0.00223
+lp_time=(0.0094, 2.3), mip_time=(48.3, 4.0); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5110.2772231714, 5110.598532023123)
+lb= 5108.9, ub= 5112.3, agap= 3.4, rgap= 0.00067
+lp_time=(0.0097, 0.9), mip_time=(35.0, 2.9); Ncut_off=(1, 4); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 29
+    PfK = 0.75
+GRB_lu = (6499.175526711912, 6499.7984446655955)
+lb= 6497.0, ub= 6501.0, agap= 4.0, rgap= 0.00061
+lp_time=(0.00801, 2.4), mip_time=(100.9, 4.2); Ncut_off=(1, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (6348.842615558434, 6349.373124141028)
+lb= 6347.2, ub= 6352.6, agap= 5.3, rgap= 0.00084
+lp_time=(0.01434, 1.8), mip_time=(24.7, 3.6); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 30
+    PfK = 0.75
+GRB_lu = (6847.393858829601, 6848.0696335406665)
+lb= 6845.8, ub= 6851.2, agap= 5.4, rgap= 0.00079
+lp_time=(0.00683, 2.1), mip_time=(60.7, 4.6); Ncut_off=(2, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (6788.655186543164, 6789.132580467598)
+lb= 6785.9, ub= 6789.0, agap= 3.1, rgap= 0.00046
+lp_time=(0.00607, 1.2), mip_time=(31.0, 2.6); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 31
+    PfK = 0.75
+GRB_lu = (6988.309734713589, 6988.931115308082)
+lb= 6983.3, ub= 6991.1, agap= 7.8, rgap= 0.00112
+lp_time=(0.01044, 2.6), mip_time=(52.0, 4.6); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6655.425374642274, 6655.652234046243)
+lb= 6654.2, ub= 6660.4, agap= 6.2, rgap= 0.00093
+lp_time=(0.00524, 1.4), mip_time=(14.7, 3.3); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 32
+    PfK = 0.75
+GRB_lu = (6825.920588999057, 6826.119672520914)
+lb= 6821.3, ub= 6826.3, agap= 5.0, rgap= 0.00074
+lp_time=(0.00415, 1.6), mip_time=(81.4, 3.2); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (6678.5815763449455, 6678.9904228651485)
+lb= 6674.5, ub= 6681.5, agap= 7.0, rgap= 0.00104
+lp_time=(0.004, 1.4), mip_time=(18.7, 3.4); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 33
+    PfK = 0.75
+GRB_lu = (7820.254229409866, 7821.005785708857)
+lb= 7819.2, ub= 7822.4, agap= 3.2, rgap= 0.00041
+lp_time=(0.003, 0.7), mip_time=(36.2, 4.0); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7811.676573901833, 7812.382867607051)
+lb= 7811.0, ub= 7812.4, agap= 1.3, rgap= 0.00017
+lp_time=(0.00251, 0.7), mip_time=(32.4, 3.4); Ncut_off=(2, 7); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 34
+    PfK = 0.75
+GRB_lu = (7936.3208433457685, 7937.0781750167225)
+lb= 7928.6, ub= 7945.1, agap= 16.6, rgap= 0.00209
+lp_time=(0.00922, 1.9), mip_time=(67.7, 4.5); Ncut_off=(3, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7711.348694770543, 7711.966167801028)
+lb= 7709.3, ub= 7714.1, agap= 4.8, rgap= 0.00062
+lp_time=(0.00511, 1.2), mip_time=(36.6, 2.6); Ncut_off=(1, 4); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 35
+    PfK = 0.75
+GRB_lu = (6229.408695936423, 6229.948517782328)
+lb= 6217.5, ub= 6238.5, agap= 21.0, rgap= 0.00337
+lp_time=(0.00814, 3.7), mip_time=(90.7, 4.0); Ncut_off=(4, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (5997.4627814903515, 5998.029163759187)
+lb= 5996.9, ub= 5999.3, agap= 2.4, rgap= 0.0004
+lp_time=(0.01569, 2.1), mip_time=(27.3, 3.0); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 36
+    PfK = 0.75
+GRB_lu = (19431.342093512925, 19431.751769082497)
+lb= 19399.6, ub= 19456.3, agap= 56.7, rgap= 0.00292
+lp_time=(0.00445, 0.6), mip_time=(67.0, 3.3); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (17333.29790520737, 17334.83073849933)
+lb= 17332.1, ub= 17343.0, agap= 10.9, rgap= 0.00063
+lp_time=(0.00031, 0.1), mip_time=(6.7, 1.9); Ncut_off=(0, 1); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 37
+    PfK = 0.75
+GRB_lu = (7086.950711906461, 7087.647762144476)
+lb= 7085.9, ub= 7122.3, agap= 36.3, rgap= 0.0051
+lp_time=(0.0024, 2.9), mip_time=(64.1, 4.3); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7001.77314791389, 7002.252883359701)
+lb= 7001.1, ub= 7076.0, agap= 74.9, rgap= 0.01058
+lb= 7001.1, ub= 7046.5, agap= 45.4, rgap= 0.00645
+lp_time=(0.00171, 1.2), mip_time=(23.8, 6.7); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 38
+    PfK = 0.75
+GRB_lu = (7130.659378499055, 7131.09060067234)
+lb= 7127.2, ub= 7131.8, agap= 4.7, rgap= 0.00065
+lp_time=(0.01305, 1.6), mip_time=(40.0, 3.5); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (7111.040072420315, 7111.434689134041)
+lb= 7107.4, ub= 7117.8, agap= 10.3, rgap= 0.00145
+lp_time=(0.00551, 1.2), mip_time=(25.7, 2.5); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 1, SEEDi = 39
+    PfK = 0.75
+GRB_lu = (7388.42009828878, 7388.941624045332)
+lb= 7382.9, ub= 7390.3, agap= 7.4, rgap= 0.001
+lp_time=(0.00446, 0.8), mip_time=(29.1, 3.0); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (7371.994280180295, 7372.563712446747)
+lb= 7371.5, ub= 7373.9, agap= 2.4, rgap= 0.00032
+lp_time=(0.00136, 0.4), mip_time=(12.2, 2.5); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 0
+    PfK = 0.75
+GRB_lu = (5553.37861943048, 5553.688775004803)
+lb= 5548.7, ub= 5558.2, agap= 9.5, rgap= 0.00171
+lp_time=(0.00561, 2.1), mip_time=(59.9, 4.5); Ncut_off=(3, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (4494.522118520712, 4494.957703610233)
+lb= 4487.5, ub= 4501.8, agap= 14.3, rgap= 0.00317
+lp_time=(0.00189, 1.3), mip_time=(24.0, 3.2); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 1
+    PfK = 0.75
+GRB_lu = (7256.409491452599, 7257.06253893696)
+lb= 7254.4, ub= 7257.4, agap= 3.0, rgap= 0.00041
+lp_time=(0.01405, 2.2), mip_time=(36.1, 2.8); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7228.453838667272, 7229.167601095269)
+lb= 7227.8, ub= 7229.2, agap= 1.4, rgap= 0.00019
+lp_time=(0.00083, 1.0), mip_time=(8.4, 2.1); Ncut_off=(2, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 2
+    PfK = 0.75
+GRB_lu = (6358.556461818794, 6359.182452226712)
+lb= 6352.2, ub= 6382.6, agap= 30.4, rgap= 0.00477
+lp_time=(0.02107, 3.1), mip_time=(121.3, 4.0); Ncut_off=(3, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (6174.167782629065, 6174.63011189891)
+lb= 6172.3, ub= 6191.8, agap= 19.5, rgap= 0.00315
+lp_time=(0.00204, 1.4), mip_time=(23.2, 3.0); Ncut_off=(3, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 3
+    PfK = 0.75
+GRB_lu = (1324.544503308938, 1324.668637540734)
+lb= 1293.8, ub= 1411.2, agap= 117.4, rgap= 0.08322
+lb= 1293.9, ub= 1340.3, agap= 46.4, rgap= 0.03462
+lb= 1293.9, ub= 1334.3, agap= 40.4, rgap= 0.03029
+Node 5 pruned, NchkCutOff= 0
+Quit as all nodes are closed.
+lb= 1294.5, ub= 1334.3, agap= 39.8, rgap= 0.02986
+lp_time=(0.02048, 7.0), mip_time=(207.9, 24.6); Ncut_off=(10, 22); Npruned=1
+    PfK = 1.0
+GRB_lu = (1316.8700963317087, 1316.9778797148228)
+lb= 1305.4, ub= 1321.0, agap= 15.7, rgap= 0.01185
+Node 5 pruned, NchkCutOff= 0
+Node 19 pruned, NchkCutOff= 0
+Node 11 pruned, NchkCutOff= 0
+Node 10 pruned, NchkCutOff= 0
+Quit as all nodes are closed.
+lb= 1305.5, ub= 1321.0, agap= 15.6, rgap= 0.01177
+lp_time=(0.01616, 3.3), mip_time=(141.7, 7.1); Ncut_off=(7, 15); Npruned=4
+        S = 1, GeoLoad = 0, SEEDi = 4
+    PfK = 0.75
+GRB_lu = (7368.90625902638, 7369.641424364302)
+lb= 7365.8, ub= 7378.8, agap= 13.0, rgap= 0.00176
+lp_time=(0.00747, 3.7), mip_time=(79.8, 6.5); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7207.767264561216, 7208.472578711517)
+lb= 7204.0, ub= 7275.3, agap= 71.3, rgap= 0.0098
+lb= 7204.0, ub= 7209.9, agap= 5.9, rgap= 0.00082
+lp_time=(0.00818, 2.4), mip_time=(25.2, 9.0); Ncut_off=(3, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 5
+    PfK = 0.75
+GRB_lu = (4390.8555277352425, 4391.291438127)
+lb= 4388.8, ub= 4397.4, agap= 8.7, rgap= 0.00197
+lp_time=(0.01016, 2.0), mip_time=(61.1, 4.0); Ncut_off=(4, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (4274.62685169566, 4274.862760483698)
+lb= 4272.0, ub= 4278.3, agap= 6.3, rgap= 0.00148
+lp_time=(0.02528, 4.2), mip_time=(288.6, 3.2); Ncut_off=(2, 40); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 6
+    PfK = 0.75
+GRB_lu = (3328.1142118860416, 3328.441843079854)
+lb= 3325.4, ub= 3336.7, agap= 11.3, rgap= 0.00339
+lp_time=(0.00973, 6.5), mip_time=(96.9, 3.7); Ncut_off=(4, 9); Npruned=0
+    PfK = 1.0
+GRB_lu = (3170.578624620825, 3170.8234994556888)
+lb= 3169.3, ub= 3179.3, agap= 10.0, rgap= 0.00313
+lp_time=(0.00826, 2.7), mip_time=(41.9, 3.0); Ncut_off=(2, 6); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 7
+    PfK = 0.75
+GRB_lu = (5287.037854743003, 5287.4514970231285)
+lb= 5283.9, ub= 5293.3, agap= 9.4, rgap= 0.00177
+lp_time=(0.01359, 3.4), mip_time=(79.9, 4.2); Ncut_off=(3, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (5074.628716764384, 5075.134488961027)
+lb= 5071.1, ub= 5083.4, agap= 12.3, rgap= 0.00243
+lp_time=(0.00765, 1.9), mip_time=(30.3, 3.2); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 8
+    PfK = 0.75
+GRB_lu = (6808.536350858215, 6809.149291588419)
+lb= 6806.0, ub= 6810.7, agap= 4.7, rgap= 0.00069
+lp_time=(0.00513, 1.1), mip_time=(22.3, 3.9); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (6808.535470167323, 6808.799607114974)
+lb= 6806.6, ub= 6810.4, agap= 3.8, rgap= 0.00056
+lp_time=(0.00862, 1.2), mip_time=(20.6, 2.3); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 9
+    PfK = 0.75
+GRB_lu = (4627.904946328324, 4628.15296309581)
+lb= 4626.2, ub= 4628.8, agap= 2.6, rgap= 0.00056
+lp_time=(0.00572, 1.6), mip_time=(32.0, 2.5); Ncut_off=(3, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (4606.709704422321, 4607.005757282575)
+lb= 4605.0, ub= 4609.4, agap= 4.4, rgap= 0.00095
+lp_time=(0.00943, 1.2), mip_time=(29.2, 2.7); Ncut_off=(1, 5); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 10
+    PfK = 0.75
+GRB_lu = (9475.410926154449, 9476.030606680048)
+lb= 9469.6, ub= 9476.9, agap= 7.3, rgap= 0.00078
+lp_time=(0.01088, 1.0), mip_time=(56.7, 3.3); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (9342.964002984485, 9343.411400424648)
+lb= 9342.9, ub= 9344.1, agap= 1.2, rgap= 0.00013
+lp_time=(0.00466, 0.5), mip_time=(63.0, 2.7); Ncut_off=(1, 10); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 11
+    PfK = 0.75
+GRB_lu = (10409.22932444038, 10410.134695341007)
+lb= 10398.5, ub= 10443.2, agap= 44.7, rgap= 0.00428
+lp_time=(0.01184, 1.8), mip_time=(78.9, 4.4); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (9207.53799747445, 9208.181566801062)
+lb= 9206.6, ub= 9208.3, agap= 1.7, rgap= 0.00018
+lp_time=(0.00082, 0.9), mip_time=(16.1, 2.3); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 12
+    PfK = 0.75
+GRB_lu = (12073.782668476239, 12074.5683535176)
+lb= 12070.2, ub= 12077.7, agap= 7.5, rgap= 0.00062
+lp_time=(0.00911, 1.0), mip_time=(35.5, 3.9); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (10240.375865372338, 10241.072961496297)
+lb= 10239.9, ub= 10241.1, agap= 1.2, rgap= 0.00012
+lp_time=(0.00058, 0.2), mip_time=(8.5, 2.3); Ncut_off=(1, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 13
+    PfK = 0.75
+GRB_lu = (6665.232441605558, 6665.85953135962)
+lb= 6661.6, ub= 6669.7, agap= 8.1, rgap= 0.00122
+lp_time=(0.01819, 2.5), mip_time=(67.3, 4.0); Ncut_off=(2, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (6300.679364336614, 6301.074450038183)
+lb= 6295.1, ub= 6301.1, agap= 6.0, rgap= 0.00094
+lp_time=(0.00075, 0.5), mip_time=(7.7, 2.4); Ncut_off=(1, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 14
+    PfK = 0.75
+GRB_lu = (3824.6174010333343, 3824.999233178646)
+lb= 3821.7, ub= 3846.4, agap= 24.7, rgap= 0.00641
+lp_time=(0.01003, 3.0), mip_time=(49.6, 3.7); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (3739.6549345382205, 3740.0280556903003)
+lb= 3737.9, ub= 3740.2, agap= 2.3, rgap= 0.00062
+lp_time=(0.00695, 2.1), mip_time=(31.9, 1.8); Ncut_off=(5, 4); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 15
+    PfK = 0.75
+GRB_lu = (6012.53732170507, 6012.977791700871)
+lb= 6010.6, ub= 6017.2, agap= 6.6, rgap= 0.00109
+lp_time=(0.00636, 1.2), mip_time=(91.8, 4.4); Ncut_off=(3, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (6003.345925024652, 6003.94479409401)
+lb= 6002.1, ub= 6019.5, agap= 17.4, rgap= 0.00289
+lp_time=(0.00506, 0.9), mip_time=(23.2, 3.5); Ncut_off=(3, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 16
+    PfK = 0.75
+GRB_lu = (6554.759687573971, 6555.413481840091)
+lb= 6552.3, ub= 6558.2, agap= 5.9, rgap= 0.00089
+lp_time=(0.01151, 2.8), mip_time=(89.6, 4.3); Ncut_off=(2, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (6346.6211897857365, 6347.068261820606)
+lb= 6344.7, ub= 6351.5, agap= 6.9, rgap= 0.00108
+lp_time=(0.01781, 2.3), mip_time=(42.0, 3.4); Ncut_off=(2, 4); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 17
+    PfK = 0.75
+GRB_lu = (4134.127643286135, 4134.510425284894)
+lb= 4129.9, ub= 4139.4, agap= 9.4, rgap= 0.00228
+lp_time=(0.01185, 2.2), mip_time=(54.9, 3.5); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (3820.3177536347844, 3820.699741195356)
+lb= 3818.0, ub= 3827.2, agap= 9.1, rgap= 0.00239
+lp_time=(0.00912, 1.7), mip_time=(28.4, 2.9); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 18
+    PfK = 0.75
+GRB_lu = (4860.907146379104, 4861.32165514378)
+lb= 4852.5, ub= 4874.8, agap= 22.3, rgap= 0.00458
+lp_time=(0.01363, 3.0), mip_time=(52.1, 4.2); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (4736.884275716266, 4737.347568715504)
+lb= 4735.3, ub= 4741.5, agap= 6.2, rgap= 0.00131
+lp_time=(0.01039, 2.5), mip_time=(34.9, 3.7); Ncut_off=(3, 4); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 19
+    PfK = 0.75
+GRB_lu = (5904.785989482374, 5905.358171603777)
+lb= 5902.0, ub= 5913.9, agap= 11.9, rgap= 0.00201
+lp_time=(0.00832, 1.6), mip_time=(38.4, 4.7); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (5669.412899001308, 5669.929820101412)
+lb= 5667.2, ub= 5671.8, agap= 4.6, rgap= 0.00081
+lp_time=(0.00579, 1.6), mip_time=(40.3, 3.7); Ncut_off=(2, 4); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 20
+    PfK = 0.75
+GRB_lu = (9287.327899255313, 9288.128853141308)
+lb= 9285.2, ub= 9288.6, agap= 3.4, rgap= 0.00036
+lp_time=(0.0006, 1.4), mip_time=(10.7, 3.3); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (9238.469150251714, 9238.55743629238)
+lb= 9237.0, ub= 9239.0, agap= 2.0, rgap= 0.00022
+lp_time=(0.00063, 0.9), mip_time=(6.4, 3.9); Ncut_off=(1, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 21
+    PfK = 0.75
+GRB_lu = (5379.289309173331, 5379.819011770685)
+lb= 5376.2, ub= 5389.5, agap= 13.3, rgap= 0.00248
+lp_time=(0.01506, 3.3), mip_time=(65.9, 5.2); Ncut_off=(4, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5188.893937161136, 5189.2277733353)
+lb= 5185.6, ub= 5191.2, agap= 5.6, rgap= 0.00109
+lp_time=(0.01329, 2.5), mip_time=(20.9, 3.1); Ncut_off=(2, 3); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 22
+    PfK = 0.75
+GRB_lu = (7481.627425475632, 7482.34800987249)
+lb= 7478.1, ub= 7484.2, agap= 6.1, rgap= 0.00081
+lp_time=(0.01243, 2.4), mip_time=(54.4, 4.3); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7437.105343261081, 7437.7479968120915)
+lb= 7434.3, ub= 7439.5, agap= 5.2, rgap= 0.0007
+lp_time=(0.01578, 1.9), mip_time=(26.0, 3.8); Ncut_off=(1, 3); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 23
+    PfK = 0.75
+GRB_lu = (2514.900155833574, 2515.0559558096456)
+lb= 2512.0, ub= 2524.5, agap= 12.4, rgap= 0.00493
+lp_time=(0.01378, 2.4), mip_time=(100.6, 2.8); Ncut_off=(2, 19); Npruned=0
+    PfK = 1.0
+GRB_lu = (2514.823718168252, 2515.05595466611)
+lb= 2513.0, ub= 2528.3, agap= 15.3, rgap= 0.00603
+lp_time=(0.01038, 2.3), mip_time=(60.4, 1.5); Ncut_off=(2, 16); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 24
+    PfK = 0.75
+GRB_lu = (11641.877442336678, 11642.985852462096)
+lb= 11640.5, ub= 11643.7, agap= 3.2, rgap= 0.00027
+lp_time=(0.00086, 0.3), mip_time=(11.4, 2.8); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (9849.39875099311, 9850.125211325485)
+lb= 9849.7, ub= 9853.5, agap= 3.7, rgap= 0.00038
+lp_time=(0.00216, 0.4), mip_time=(14.8, 2.3); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 25
+    PfK = 0.75
+GRB_lu = (10257.158391494744, 10258.133416018694)
+lb= 10251.6, ub= 10272.7, agap= 21.1, rgap= 0.00205
+lp_time=(0.01838, 4.8), mip_time=(100.8, 6.0); Ncut_off=(2, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (8329.086518181766, 8329.809141035865)
+lb= 8322.5, ub= 8336.1, agap= 13.6, rgap= 0.00163
+lp_time=(0.01583, 3.6), mip_time=(55.2, 4.6); Ncut_off=(1, 4); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 26
+    PfK = 0.75
+GRB_lu = (6655.945559032789, 6656.44790940527)
+lb= 6654.5, ub= 6658.1, agap= 3.6, rgap= 0.00054
+lp_time=(0.01223, 2.7), mip_time=(61.8, 3.0); Ncut_off=(2, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (6618.272992560691, 6618.624608394421)
+lb= 6617.3, ub= 6622.2, agap= 4.9, rgap= 0.00074
+lp_time=(0.00756, 1.4), mip_time=(19.1, 3.2); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 27
+    PfK = 0.75
+GRB_lu = (10446.992408730077, 10447.389918228198)
+lb= 10445.4, ub= 10448.9, agap= 3.5, rgap= 0.00033
+lp_time=(0.00069, 0.6), mip_time=(11.6, 2.7); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (10328.224894216517, 10328.961822085124)
+lb= 10327.4, ub= 10329.0, agap= 1.6, rgap= 0.00015
+lp_time=(0.0007, 0.4), mip_time=(8.1, 2.0); Ncut_off=(1, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 28
+    PfK = 0.75
+GRB_lu = (6423.685860159981, 6424.32393817015)
+lb= 6417.0, ub= 6427.0, agap= 10.0, rgap= 0.00155
+lp_time=(0.01122, 2.8), mip_time=(90.6, 3.4); Ncut_off=(3, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (5632.448120502751, 5632.893373747029)
+lb= 5628.4, ub= 5633.0, agap= 4.6, rgap= 0.00082
+lp_time=(0.00265, 1.1), mip_time=(28.5, 2.1); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 29
+    PfK = 0.75
+GRB_lu = (5627.624583033677, 5628.159010607484)
+lb= 5623.1, ub= 5630.5, agap= 7.4, rgap= 0.00132
+lp_time=(0.01145, 2.4), mip_time=(77.3, 4.2); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (5382.775687668, 5383.20350544689)
+lb= 5380.6, ub= 5400.5, agap= 19.8, rgap= 0.00367
+lp_time=(0.0075, 1.7), mip_time=(27.4, 3.9); Ncut_off=(3, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 30
+    PfK = 0.75
+GRB_lu = (8224.818276135511, 8225.60110381963)
+lb= 8221.5, ub= 8227.6, agap= 6.1, rgap= 0.00074
+lp_time=(0.00541, 1.0), mip_time=(26.2, 2.8); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (7782.077315976443, 7782.8340610594705)
+lb= 7781.8, ub= 7782.5, agap= 0.7, rgap= 9.0e-5
+lp_time=(0.00106, 0.4), mip_time=(11.7, 1.8); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 31
+    PfK = 0.75
+GRB_lu = (7699.8250486592115, 7700.525614004254)
+lb= 7696.0, ub= 7711.3, agap= 15.3, rgap= 0.00199
+lp_time=(0.01173, 2.7), mip_time=(136.9, 4.6); Ncut_off=(2, 9); Npruned=0
+    PfK = 1.0
+GRB_lu = (7235.313219950084, 7235.9643362584775)
+lb= 7225.6, ub= 7241.8, agap= 16.2, rgap= 0.00224
+lp_time=(0.00089, 1.0), mip_time=(12.0, 4.2); Ncut_off=(1, 1); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 32
+    PfK = 0.75
+GRB_lu = (7421.092067340354, 7421.713829939981)
+lb= 7416.3, ub= 7425.3, agap= 9.0, rgap= 0.00122
+lp_time=(0.0096, 1.4), mip_time=(64.6, 4.3); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (7251.74407050208, 7251.952151835021)
+lb= 7246.8, ub= 7315.6, agap= 68.8, rgap= 0.0094
+lb= 7246.8, ub= 7260.5, agap= 13.7, rgap= 0.00188
+lp_time=(0.01254, 2.2), mip_time=(34.5, 7.4); Ncut_off=(2, 4); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 33
+    PfK = 0.75
+GRB_lu = (7023.1247412783905, 7023.537874287131)
+lb= 7020.6, ub= 7031.5, agap= 10.9, rgap= 0.00155
+lp_time=(0.0005, 0.9), mip_time=(6.3, 4.3); Ncut_off=(2, 0); Npruned=0
+    PfK = 1.0
+GRB_lu = (6819.50650610626, 6819.808100848123)
+lb= 6813.7, ub= 6822.1, agap= 8.5, rgap= 0.00124
+lp_time=(0.00052, 0.5), mip_time=(3.8, 2.1); Ncut_off=(2, 0); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 34
+    PfK = 0.75
+GRB_lu = (9285.271275786263, 9286.037392744502)
+lb= 9275.9, ub= 9295.4, agap= 19.6, rgap= 0.00211
+lp_time=(0.01462, 2.3), mip_time=(79.0, 4.9); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (8506.55760448683, 8507.194436242833)
+lb= 8503.9, ub= 8513.8, agap= 9.9, rgap= 0.00117
+lp_time=(0.00667, 1.1), mip_time=(25.1, 3.8); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 35
+    PfK = 0.75
+GRB_lu = (6855.628650159633, 6856.270359418826)
+lb= 6855.0, ub= 6856.8, agap= 1.8, rgap= 0.00026
+lp_time=(0.00473, 1.3), mip_time=(51.8, 4.5); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6583.38677441516, 6584.043782923005)
+lb= 6582.3, ub= 6584.3, agap= 2.1, rgap= 0.00031
+lp_time=(0.00885, 1.3), mip_time=(42.9, 3.4); Ncut_off=(2, 5); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 36
+    PfK = 0.75
+GRB_lu = (7857.13004273507, 7857.891312372355)
+lb= 7843.6, ub= 8027.9, agap= 184.4, rgap= 0.02297
+lb= 7843.6, ub= 7872.2, agap= 28.6, rgap= 0.00364
+lp_time=(0.03707, 8.3), mip_time=(151.3, 21.4); Ncut_off=(5, 11); Npruned=0
+    PfK = 1.0
+GRB_lu = (7737.395435315414, 7738.168925105849)
+lb= 7733.4, ub= 7738.0, agap= 4.6, rgap= 0.00059
+lp_time=(0.01797, 2.0), mip_time=(48.2, 3.8); Ncut_off=(1, 5); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 37
+    PfK = 0.75
+GRB_lu = (5866.700472008324, 5867.266388874346)
+lb= 5864.8, ub= 5867.3, agap= 2.4, rgap= 0.00042
+lp_time=(0.01356, 1.8), mip_time=(30.1, 3.0); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (5828.955838546564, 5829.438745218057)
+lb= 5825.2, ub= 5829.9, agap= 4.7, rgap= 0.00081
+lp_time=(0.01108, 1.7), mip_time=(19.1, 2.3); Ncut_off=(2, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 38
+    PfK = 0.75
+GRB_lu = (6000.280223651583, 6000.371467061131)
+lb= 5998.3, ub= 6003.1, agap= 4.9, rgap= 0.00082
+lp_time=(0.0128, 1.6), mip_time=(42.8, 4.2); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5999.467491534469, 5999.964618318827)
+lb= 5999.2, ub= 6001.2, agap= 2.0, rgap= 0.00033
+lp_time=(0.00165, 0.5), mip_time=(11.0, 2.0); Ncut_off=(1, 2); Npruned=0
+        S = 1, GeoLoad = 0, SEEDi = 39
+    PfK = 0.75
+GRB_lu = (6043.743669715114, 6044.3140568020735)
+lb= 6038.4, ub= 6044.6, agap= 6.2, rgap= 0.00103
+lp_time=(0.00044, 0.7), mip_time=(5.0, 3.1); Ncut_off=(2, 0); Npruned=0
+    PfK = 1.0
+GRB_lu = (6028.730238042059, 6029.328075871952)
+lb= 6024.1, ub= 6029.3, agap= 5.3, rgap= 0.00087
+lp_time=(0.00049, 0.6), mip_time=(3.2, 1.7); Ncut_off=(2, 0); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 0
+    PfK = 0.75
+GRB_lu = (7787.5606572106035, 7791.8876828688935)
+lb= 7784.9, ub= 7806.6, agap= 21.7, rgap= 0.00279
+lp_time=(0.00729, 4.4), mip_time=(139.4, 3.9); Ncut_off=(2, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (6883.739802553835, 6884.498339009307)
+lb= 6877.9, ub= 6893.1, agap= 15.2, rgap= 0.0022
+lp_time=(0.00164, 3.0), mip_time=(28.1, 3.5); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 1
+    PfK = 0.75
+GRB_lu = (5995.044612336024, 5996.008490720073)
+lb= 5993.5, ub= 6008.5, agap= 15.0, rgap= 0.0025
+lp_time=(0.00653, 2.6), mip_time=(82.5, 4.5); Ncut_off=(2, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (5978.945323384748, 5979.541532097752)
+lb= 5975.8, ub= 5985.7, agap= 9.9, rgap= 0.00165
+lp_time=(0.00993, 2.7), mip_time=(39.4, 3.3); Ncut_off=(2, 4); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 2
+    PfK = 0.75
+GRB_lu = (11817.939061202234, 11819.892291894908)
+lb= 11812.5, ub= 11832.7, agap= 20.2, rgap= 0.00171
+lp_time=(0.01582, 2.8), mip_time=(70.0, 4.1); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (11340.223706414317, 11341.840508922287)
+lb= 11332.7, ub= 11346.4, agap= 13.7, rgap= 0.00121
+lp_time=(0.00132, 1.6), mip_time=(26.4, 3.2); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 3
+    PfK = 0.75
+GRB_lu = (6244.615433838947, 6245.584684737017)
+lb= 6241.6, ub= 6253.0, agap= 11.4, rgap= 0.00183
+lp_time=(0.01178, 2.8), mip_time=(45.1, 4.7); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (6063.823688465758, 6064.357968337678)
+lb= 6062.3, ub= 6071.4, agap= 9.1, rgap= 0.0015
+lp_time=(0.00528, 1.8), mip_time=(37.8, 3.8); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 4
+    PfK = 0.75
+GRB_lu = (7240.094049662896, 7244.225514467845)
+lb= 7237.5, ub= 7246.0, agap= 8.5, rgap= 0.00117
+lp_time=(0.00976, 3.9), mip_time=(69.6, 5.4); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7131.363969840097, 7132.314722040364)
+lb= 7129.2, ub= 7144.4, agap= 15.2, rgap= 0.00213
+lp_time=(0.00995, 3.1), mip_time=(58.4, 3.9); Ncut_off=(3, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 5
+    PfK = 0.75
+GRB_lu = (9604.879121005915, 9614.105767434885)
+lb= 9601.1, ub= 9620.0, agap= 18.9, rgap= 0.00196
+lp_time=(0.00869, 1.8), mip_time=(86.5, 4.4); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (9382.373028934779, 9383.278398383942)
+lb= 9381.6, ub= 9384.7, agap= 3.2, rgap= 0.00034
+lp_time=(0.00091, 0.9), mip_time=(14.0, 2.9); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 6
+    PfK = 0.75
+GRB_lu = (10467.176294516992, 10473.615393039958)
+lb= 10458.3, ub= 10502.6, agap= 44.4, rgap= 0.00422
+lp_time=(0.00586, 2.8), mip_time=(88.0, 7.2); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (7007.92782741787, 7011.826475039204)
+lb= 7004.8, ub= 7030.3, agap= 25.4, rgap= 0.00361
+lp_time=(0.00889, 3.9), mip_time=(126.6, 3.4); Ncut_off=(2, 9); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 7
+    PfK = 0.75
+GRB_lu = (7510.533339848675, 7511.598084420171)
+lb= 7503.2, ub= 7529.4, agap= 26.2, rgap= 0.00348
+lp_time=(0.01061, 3.7), mip_time=(100.1, 6.5); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7304.654393041363, 7305.421491634988)
+lb= 7302.0, ub= 7314.2, agap= 12.2, rgap= 0.00167
+lp_time=(0.00906, 2.1), mip_time=(33.4, 3.7); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 8
+    PfK = 0.75
+GRB_lu = (6978.0444312467735, 6978.39961465349)
+lb= 6974.4, ub= 6980.6, agap= 6.2, rgap= 0.00089
+lp_time=(0.01867, 3.6), mip_time=(89.2, 4.4); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (6920.125543735504, 6920.588875444718)
+lb= 6918.3, ub= 6926.9, agap= 8.6, rgap= 0.00124
+lp_time=(0.00557, 2.2), mip_time=(49.4, 4.0); Ncut_off=(2, 4); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 9
+    PfK = 0.75
+GRB_lu = (13434.16800890396, 13442.089499207996)
+lb= 13426.2, ub= 13457.8, agap= 31.6, rgap= 0.00235
+lp_time=(0.01104, 2.6), mip_time=(151.1, 4.5); Ncut_off=(1, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (11669.406606011536, 11671.970661165931)
+lb= 11664.1, ub= 11676.6, agap= 12.5, rgap= 0.00107
+lp_time=(0.00338, 1.1), mip_time=(32.8, 3.6); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 10
+    PfK = 0.75
+GRB_lu = (6943.047924290924, 6943.564981878547)
+lb= 6942.0, ub= 6949.2, agap= 7.1, rgap= 0.00103
+lp_time=(0.00147, 1.8), mip_time=(27.7, 4.5); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (6894.585252160105, 6895.179623324701)
+lb= 6890.4, ub= 6897.2, agap= 6.8, rgap= 0.00098
+lp_time=(0.01435, 2.7), mip_time=(30.4, 3.5); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 11
+    PfK = 0.75
+GRB_lu = (6900.598151768231, 6902.588279529075)
+lb= 6898.4, ub= 6908.3, agap= 9.9, rgap= 0.00143
+lp_time=(0.00612, 4.1), mip_time=(93.0, 5.0); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6796.037620903156, 6797.419151229553)
+lb= 6793.6, ub= 6801.2, agap= 7.5, rgap= 0.00111
+lp_time=(0.01413, 4.0), mip_time=(44.3, 3.7); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 12
+    PfK = 0.75
+GRB_lu = (7257.761774556339, 7259.832331327871)
+lb= 7240.8, ub= 7263.9, agap= 23.1, rgap= 0.00318
+lp_time=(0.00356, 2.5), mip_time=(80.5, 4.7); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (6425.166762497747, 6425.80588836431)
+lb= 6422.8, ub= 6432.6, agap= 9.8, rgap= 0.00152
+lp_time=(0.0086, 2.6), mip_time=(46.3, 4.1); Ncut_off=(2, 5); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 13
+    PfK = 0.75
+GRB_lu = (5661.97354557657, 5664.346478635662)
+lb= 5654.3, ub= 5668.2, agap= 14.0, rgap= 0.00246
+lp_time=(0.01835, 7.2), mip_time=(172.0, 6.9); Ncut_off=(3, 9); Npruned=0
+    PfK = 1.0
+GRB_lu = (5396.26532761488, 5396.8020536838485)
+lb= 5394.8, ub= 5400.6, agap= 5.8, rgap= 0.00107
+lp_time=(0.00899, 3.7), mip_time=(40.7, 3.3); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 14
+    PfK = 0.75
+GRB_lu = (6274.024937035389, 6275.13709698953)
+lb= 6270.8, ub= 6278.2, agap= 7.4, rgap= 0.00118
+lp_time=(0.01395, 5.3), mip_time=(103.2, 5.1); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6097.731631995775, 6098.931500646543)
+lb= 6092.7, ub= 6101.4, agap= 8.7, rgap= 0.00143
+lp_time=(0.01547, 3.4), mip_time=(33.0, 3.9); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 15
+    PfK = 0.75
+GRB_lu = (7042.1750340687395, 7044.2690955050875)
+lb= 7041.2, ub= 7052.2, agap= 11.0, rgap= 0.00156
+lp_time=(0.00828, 2.5), mip_time=(90.3, 5.0); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6987.907169805736, 6988.634306440784)
+lb= 6987.5, ub= 6989.7, agap= 2.1, rgap= 0.00031
+lp_time=(0.00667, 2.4), mip_time=(76.1, 4.1); Ncut_off=(3, 6); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 16
+    PfK = 0.75
+GRB_lu = (7023.137419120254, 7023.879483785003)
+lb= 7020.5, ub= 7037.7, agap= 17.2, rgap= 0.00245
+lp_time=(0.01429, 5.6), mip_time=(127.8, 5.2); Ncut_off=(3, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (6539.014236107441, 6539.592439510746)
+lb= 6533.3, ub= 6545.0, agap= 11.8, rgap= 0.0018
+lp_time=(0.01491, 4.1), mip_time=(51.4, 4.0); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 17
+    PfK = 0.75
+GRB_lu = (6273.262330225616, 6274.928741396774)
+lb= 6270.7, ub= 6283.2, agap= 12.5, rgap= 0.002
+lp_time=(0.00925, 3.7), mip_time=(174.9, 4.7); Ncut_off=(3, 10); Npruned=0
+    PfK = 1.0
+GRB_lu = (6132.087030203391, 6132.65635609643)
+lb= 6131.5, ub= 6134.1, agap= 2.6, rgap= 0.00043
+lp_time=(0.00111, 1.3), mip_time=(26.2, 3.5); Ncut_off=(1, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 18
+    PfK = 0.75
+GRB_lu = (8656.672131369012, 8663.041770000844)
+lb= 8648.5, ub= 8677.5, agap= 29.0, rgap= 0.00334
+lp_time=(0.00849, 5.4), mip_time=(105.8, 5.0); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (8477.461253021807, 8478.70110327697)
+lb= 8468.5, ub= 8491.3, agap= 22.8, rgap= 0.00269
+lp_time=(0.00125, 2.5), mip_time=(27.2, 4.0); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 19
+    PfK = 0.75
+GRB_lu = (16535.171466961103, 16535.648657283906)
+lb= 16531.1, ub= 16550.4, agap= 19.3, rgap= 0.00116
+lp_time=(0.00558, 1.6), mip_time=(31.3, 3.7); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (14177.73892427038, 14179.029704458138)
+lb= 14173.9, ub= 14198.5, agap= 24.7, rgap= 0.00174
+lp_time=(0.00057, 1.1), mip_time=(13.6, 3.2); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 20
+    PfK = 0.75
+GRB_lu = (7137.879254556754, 7138.497990910526)
+lb= 7133.1, ub= 7151.3, agap= 18.1, rgap= 0.00254
+lp_time=(0.01336, 3.9), mip_time=(48.6, 4.7); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7112.931636331165, 7113.611862887415)
+lb= 7107.8, ub= 7120.2, agap= 12.4, rgap= 0.00174
+lp_time=(0.01179, 2.6), mip_time=(27.1, 3.7); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 21
+    PfK = 0.75
+GRB_lu = (6583.258081277704, 6588.483952890474)
+lb= 6579.4, ub= 6593.5, agap= 14.1, rgap= 0.00214
+lp_time=(0.00466, 4.7), mip_time=(82.7, 5.3); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5947.962629053138, 5948.540534962269)
+lb= 5944.1, ub= 5957.3, agap= 13.2, rgap= 0.00222
+lp_time=(0.01004, 2.8), mip_time=(43.2, 4.5); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 22
+    PfK = 0.75
+GRB_lu = (9341.879186870743, 9342.736005775932)
+lb= 9339.6, ub= 9419.0, agap= 79.4, rgap= 0.00843
+lp_time=(0.00337, 3.2), mip_time=(45.9, 4.6); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (9308.974133052583, 9309.78938691768)
+lb= 9301.9, ub= 9312.8, agap= 11.0, rgap= 0.00118
+lp_time=(0.00064, 1.0), mip_time=(10.5, 3.3); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 23
+    PfK = 0.75
+GRB_lu = (7461.674787249262, 7462.342632882823)
+lb= 7454.5, ub= 7463.4, agap= 8.9, rgap= 0.00119
+lp_time=(0.00997, 2.4), mip_time=(44.1, 5.4); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (7429.549482338632, 7430.241201322369)
+lb= 7426.0, ub= 7431.9, agap= 5.9, rgap= 0.00079
+lp_time=(0.02051, 2.8), mip_time=(35.0, 3.7); Ncut_off=(1, 4); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 24
+    PfK = 0.75
+GRB_lu = (7269.974101746586, 7271.050392084489)
+lb= 7267.8, ub= 7276.9, agap= 9.1, rgap= 0.00126
+lp_time=(0.00363, 1.6), mip_time=(47.6, 5.1); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (7151.00378683971, 7151.433881214214)
+lb= 7148.1, ub= 7154.2, agap= 6.1, rgap= 0.00085
+lp_time=(0.01413, 2.6), mip_time=(34.4, 3.6); Ncut_off=(1, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 25
+    PfK = 0.75
+GRB_lu = (9657.346783708277, 9665.772980417692)
+lb= 9653.3, ub= 9672.2, agap= 18.9, rgap= 0.00196
+lp_time=(0.01802, 4.7), mip_time=(240.5, 4.6); Ncut_off=(1, 12); Npruned=0
+    PfK = 1.0
+GRB_lu = (8463.805814919542, 8466.338652404358)
+lb= 8460.6, ub= 8481.7, agap= 21.1, rgap= 0.00248
+lp_time=(0.00063, 1.2), mip_time=(15.1, 3.9); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 26
+    PfK = 0.75
+GRB_lu = (11085.143034146884, 11088.016303633973)
+lb= 11079.1, ub= 11097.6, agap= 18.5, rgap= 0.00167
+lp_time=(0.00061, 0.5), mip_time=(19.4, 4.5); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (11006.643257488593, 11007.46423359495)
+lb= 11001.4, ub= 11011.7, agap= 10.3, rgap= 0.00094
+lp_time=(0.00067, 0.3), mip_time=(9.6, 3.2); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 27
+    PfK = 0.75
+GRB_lu = (6648.724429447932, 6649.415244176578)
+lb= 6645.8, ub= 6652.9, agap= 7.0, rgap= 0.00106
+lp_time=(0.00806, 2.9), mip_time=(45.4, 4.5); Ncut_off=(3, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (6373.794034722404, 6374.338381578564)
+lb= 6369.6, ub= 6376.1, agap= 6.5, rgap= 0.00103
+lp_time=(0.00802, 2.3), mip_time=(22.6, 3.1); Ncut_off=(3, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 28
+    PfK = 0.75
+GRB_lu = (5393.241479978138, 5395.174304602501)
+lb= 5390.6, ub= 5401.0, agap= 10.4, rgap= 0.00192
+lp_time=(0.01011, 4.6), mip_time=(88.3, 4.1); Ncut_off=(3, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (5233.421279577206, 5234.080203532445)
+lb= 5232.2, ub= 5239.1, agap= 6.9, rgap= 0.00132
+lp_time=(0.00642, 3.1), mip_time=(45.7, 3.3); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 29
+    PfK = 0.75
+GRB_lu = (6328.565091987415, 6329.527839614648)
+lb= 6324.3, ub= 6338.0, agap= 13.7, rgap= 0.00216
+lp_time=(0.0088, 3.7), mip_time=(77.3, 4.3); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (6173.6969660104705, 6174.183834653426)
+lb= 6172.0, ub= 6177.0, agap= 5.1, rgap= 0.00082
+lp_time=(0.00616, 2.1), mip_time=(33.1, 3.6); Ncut_off=(1, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 30
+    PfK = 0.75
+GRB_lu = (6783.7959878312195, 6784.448436693461)
+lb= 6780.6, ub= 6793.2, agap= 12.6, rgap= 0.00185
+lp_time=(0.01062, 4.1), mip_time=(63.3, 4.8); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6681.156533759082, 6681.769391773049)
+lb= 6676.4, ub= 6682.9, agap= 6.5, rgap= 0.00097
+lp_time=(0.01956, 4.6), mip_time=(27.1, 3.7); Ncut_off=(3, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 31
+    PfK = 0.75
+GRB_lu = (7162.3541482662395, 7163.049191566121)
+lb= 7158.4, ub= 7164.9, agap= 6.5, rgap= 0.00091
+lp_time=(0.01525, 6.3), mip_time=(122.6, 4.8); Ncut_off=(4, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (6914.422168127084, 6915.233518640198)
+lb= 6911.7, ub= 6918.5, agap= 6.8, rgap= 0.00098
+lp_time=(0.01049, 3.7), mip_time=(53.5, 3.7); Ncut_off=(3, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 32
+    PfK = 0.75
+GRB_lu = (6882.208140084366, 6883.351337412416)
+lb= 6878.2, ub= 6885.9, agap= 7.7, rgap= 0.00112
+lp_time=(0.00552, 2.6), mip_time=(64.5, 4.6); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6745.210785573931, 6745.881906877181)
+lb= 6742.6, ub= 6753.4, agap= 10.8, rgap= 0.00161
+lp_time=(0.01026, 2.7), mip_time=(38.5, 3.6); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 33
+    PfK = 0.75
+GRB_lu = (6663.170613083828, 6663.7959762552155)
+lb= 6659.8, ub= 6667.7, agap= 7.9, rgap= 0.00118
+lp_time=(0.01062, 2.6), mip_time=(49.1, 4.4); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6625.766353090793, 6626.428655731289)
+lb= 6624.9, ub= 6628.8, agap= 3.9, rgap= 0.00059
+lp_time=(0.00967, 2.2), mip_time=(39.5, 3.6); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 34
+    PfK = 0.75
+GRB_lu = (8970.638727611411, 8975.68624651063)
+lb= 8962.3, ub= 8983.5, agap= 21.2, rgap= 0.00236
+lp_time=(0.00791, 3.0), mip_time=(106.9, 7.8); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (8884.966266329635, 8886.384102574617)
+lb= 8881.9, ub= 8898.7, agap= 16.7, rgap= 0.00188
+lp_time=(0.00052, 0.6), mip_time=(13.8, 3.3); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 35
+    PfK = 0.75
+GRB_lu = (6016.325976812073, 6017.2697050263505)
+lb= 6010.3, ub= 6025.4, agap= 15.1, rgap= 0.0025
+lp_time=(0.01818, 5.2), mip_time=(87.8, 4.3); Ncut_off=(3, 7); Npruned=0
+    PfK = 1.0
+GRB_lu = (5655.26310661347, 5655.828405622295)
+lb= 5652.5, ub= 5660.1, agap= 7.6, rgap= 0.00134
+lp_time=(0.01139, 2.4), mip_time=(30.3, 3.3); Ncut_off=(3, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 36
+    PfK = 0.75
+GRB_lu = (16841.825486931753, 16843.685685626093)
+lb= 16833.2, ub= 16856.3, agap= 23.1, rgap= 0.00137
+lp_time=(0.00709, 1.9), mip_time=(65.4, 4.2); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (13838.45998808506, 13839.798466200882)
+lb= 13827.8, ub= 13854.1, agap= 26.2, rgap= 0.00189
+lp_time=(0.00082, 0.6), mip_time=(22.3, 3.2); Ncut_off=(0, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 37
+    PfK = 0.75
+GRB_lu = (7609.817865475914, 7610.677635466392)
+lb= 7608.1, ub= 7687.9, agap= 79.7, rgap= 0.01037
+lb= 7608.1, ub= 7685.4, agap= 77.3, rgap= 0.01006
+lb= 7608.1, ub= 7614.7, agap= 6.6, rgap= 0.00086
+lp_time=(0.00312, 2.8), mip_time=(36.6, 16.0); Ncut_off=(2, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (7584.129704848069, 7585.024942924477)
+lb= 7581.1, ub= 7589.5, agap= 8.4, rgap= 0.0011
+lp_time=(0.00674, 2.1), mip_time=(29.8, 3.9); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 38
+    PfK = 0.75
+GRB_lu = (6708.955046434633, 6709.732387639626)
+lb= 6706.8, ub= 6714.0, agap= 7.3, rgap= 0.00108
+lp_time=(0.01041, 3.5), mip_time=(48.0, 4.3); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6677.088765134668, 6677.66288721647)
+lb= 6675.4, ub= 6681.5, agap= 6.1, rgap= 0.00091
+lp_time=(0.00108, 1.2), mip_time=(16.7, 3.5); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 1, SEEDi = 39
+    PfK = 0.75
+GRB_lu = (7102.044532458066, 7102.698679676836)
+lb= 7096.5, ub= 7107.2, agap= 10.6, rgap= 0.0015
+lp_time=(0.00472, 1.7), mip_time=(41.1, 4.4); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (7092.254574059399, 7092.958571312849)
+lb= 7089.1, ub= 7095.9, agap= 6.8, rgap= 0.00095
+lp_time=(0.01315, 2.6), mip_time=(37.2, 3.6); Ncut_off=(1, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 0
+    PfK = 0.75
+GRB_lu = (8483.777650552767, 8485.9787529056)
+lb= 8480.2, ub= 8494.5, agap= 14.3, rgap= 0.00168
+lp_time=(0.00818, 4.9), mip_time=(80.8, 5.2); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7644.979123405346, 7645.739948317388)
+lb= 7639.9, ub= 7647.9, agap= 8.0, rgap= 0.00104
+lp_time=(0.00168, 2.7), mip_time=(24.5, 3.5); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 1
+    PfK = 0.75
+GRB_lu = (7363.805942660641, 7365.377858535943)
+lb= 7361.3, ub= 7384.3, agap= 23.0, rgap= 0.00311
+lp_time=(0.00315, 4.0), mip_time=(73.5, 5.0); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7317.552199966273, 7318.279199968949)
+lb= 7313.4, ub= 7329.9, agap= 16.5, rgap= 0.00225
+lp_time=(0.00209, 2.3), mip_time=(25.1, 3.7); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 2
+    PfK = 0.75
+GRB_lu = (5560.211742707893, 5564.148263397972)
+lb= 5555.7, ub= 5569.4, agap= 13.7, rgap= 0.00247
+lp_time=(0.0246, 7.4), mip_time=(169.1, 4.5); Ncut_off=(3, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (5353.696904116032, 5355.781779631439)
+lb= 5351.2, ub= 5392.8, agap= 41.6, rgap= 0.00771
+lp_time=(0.00383, 3.5), mip_time=(53.5, 3.3); Ncut_off=(2, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 3
+    PfK = 0.75
+GRB_lu = (1380.3805388967874, 1389.910267865056)
+lb= 1364.8, ub= 1410.8, agap= 45.9, rgap= 0.03257
+lb= 1366.5, ub= 1389.4, agap= 22.8, rgap= 0.01644
+Quit as all nodes are closed.
+lb= 1366.9, ub= 1389.4, agap= 22.5, rgap= 0.0162
+lp_time=(0.02625, 11.3), mip_time=(518.1, 91.9); Ncut_off=(10, 22); Npruned=0
+    PfK = 1.0
+GRB_lu = (1340.0757636293592, 1346.4841175136212)
+lb= 1325.5, ub= 1382.1, agap= 56.6, rgap= 0.04097
+lb= 1325.6, ub= 1347.2, agap= 21.6, rgap= 0.01605
+Node 9 pruned, NchkCutOff= 1
+Node 12 pruned, NchkCutOff= 0
+Node 13 pruned, NchkCutOff= 0
+Quit as all nodes are closed.
+lb= 1325.7, ub= 1347.2, agap= 21.6, rgap= 0.01601
+lp_time=(0.01384, 8.5), mip_time=(54.6, 19.6); Ncut_off=(7, 5); Npruned=3
+        S = 5, GeoLoad = 0, SEEDi = 4
+    PfK = 0.75
+GRB_lu = (8708.91604532927, 8710.11663574532)
+lb= 8704.4, ub= 8734.1, agap= 29.8, rgap= 0.00341
+lp_time=(0.00793, 3.4), mip_time=(57.4, 5.8); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (8605.487271305783, 8606.269483255455)
+lb= 8604.5, ub= 8607.9, agap= 3.4, rgap= 0.00039
+lp_time=(0.00132, 1.9), mip_time=(21.5, 4.6); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 5
+    PfK = 0.75
+GRB_lu = (6039.686739704748, 6040.3319793005685)
+lb= 6037.3, ub= 6050.1, agap= 12.8, rgap= 0.00211
+lp_time=(0.00827, 3.5), mip_time=(40.9, 4.8); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (5940.851105488715, 5942.163335875301)
+lb= 5938.1, ub= 5958.3, agap= 20.2, rgap= 0.00339
+lp_time=(0.01036, 3.2), mip_time=(45.9, 4.2); Ncut_off=(3, 5); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 6
+    PfK = 0.75
+GRB_lu = (2771.5073720973623, 2773.1624941202604)
+lb= 2769.7, ub= 2781.8, agap= 12.1, rgap= 0.00436
+lp_time=(0.01041, 5.7), mip_time=(74.4, 3.7); Ncut_off=(4, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (2591.1011706725512, 2592.3847029257677)
+lb= 2590.1, ub= 2597.1, agap= 7.0, rgap= 0.00269
+lp_time=(0.00717, 3.9), mip_time=(65.3, 2.6); Ncut_off=(4, 6); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 7
+    PfK = 0.75
+GRB_lu = (6423.2540939853425, 6423.874789363625)
+lb= 6420.4, ub= 6430.6, agap= 10.1, rgap= 0.00157
+lp_time=(0.00528, 3.2), mip_time=(97.9, 4.8); Ncut_off=(3, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (6303.823630002699, 6304.432652788606)
+lb= 6299.5, ub= 6312.7, agap= 13.2, rgap= 0.00209
+lp_time=(0.00841, 2.7), mip_time=(40.9, 4.1); Ncut_off=(1, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 8
+    PfK = 0.75
+GRB_lu = (6137.632234476085, 6138.050666149817)
+lb= 6134.5, ub= 6140.0, agap= 5.5, rgap= 0.0009
+lp_time=(0.01083, 2.5), mip_time=(64.2, 4.6); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6103.493571381769, 6104.1020299177835)
+lb= 6099.7, ub= 6107.2, agap= 7.5, rgap= 0.00123
+lp_time=(0.00917, 2.3), mip_time=(31.7, 3.5); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 9
+    PfK = 0.75
+GRB_lu = (4450.332915762151, 4450.792139080924)
+lb= 4448.8, ub= 4459.2, agap= 10.5, rgap= 0.00235
+lp_time=(0.0142, 3.5), mip_time=(32.9, 4.1); Ncut_off=(3, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (4417.697649542402, 4418.3519631379495)
+lb= 4414.0, ub= 4425.2, agap= 11.2, rgap= 0.00252
+lp_time=(0.00872, 2.8), mip_time=(34.4, 3.0); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 10
+    PfK = 0.75
+GRB_lu = (8172.628005514517, 8173.393526926195)
+lb= 8168.8, ub= 8175.5, agap= 6.8, rgap= 0.00083
+lp_time=(0.01653, 4.0), mip_time=(62.4, 5.3); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (7930.883303253847, 7931.674354238941)
+lb= 7929.3, ub= 7934.6, agap= 5.4, rgap= 0.00068
+lp_time=(0.01493, 2.5), mip_time=(40.2, 4.0); Ncut_off=(1, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 11
+    PfK = 0.75
+GRB_lu = (10452.3540478283, 10459.321043996135)
+lb= 10445.6, ub= 10473.5, agap= 28.0, rgap= 0.00267
+lp_time=(0.0054, 3.0), mip_time=(139.0, 4.7); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+GRB_lu = (9227.356069077416, 9228.68400906281)
+lb= 9225.2, ub= 9238.5, agap= 13.3, rgap= 0.00144
+lp_time=(0.00093, 2.0), mip_time=(19.1, 3.6); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 12
+    PfK = 0.75
+GRB_lu = (12047.189247737631, 12048.160297705264)
+lb= 12046.0, ub= 12053.7, agap= 7.7, rgap= 0.00064
+lp_time=(0.00131, 0.6), mip_time=(20.3, 4.3); Ncut_off=(2, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (9972.956347262483, 9973.810248139751)
+lb= 9972.4, ub= 9975.0, agap= 2.6, rgap= 0.00026
+lp_time=(0.00161, 0.9), mip_time=(22.2, 3.6); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 13
+    PfK = 0.75
+GRB_lu = (7823.482038319808, 7824.751040103798)
+lb= 7820.6, ub= 7828.4, agap= 7.8, rgap= 0.001
+lp_time=(0.00823, 2.6), mip_time=(156.7, 4.7); Ncut_off=(1, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (7344.780255388975, 7346.628376088427)
+lb= 7339.0, ub= 7355.2, agap= 16.2, rgap= 0.0022
+lp_time=(0.00274, 1.7), mip_time=(27.7, 3.3); Ncut_off=(2, 1); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 14
+    PfK = 0.75
+GRB_lu = (3568.8760521060617, 3574.1041781209815)
+lb= 3567.1, ub= 3576.5, agap= 9.5, rgap= 0.00265
+lp_time=(0.01796, 9.6), mip_time=(212.3, 4.0); Ncut_off=(4, 9); Npruned=0
+    PfK = 1.0
+GRB_lu = (3404.9268361740005, 3406.4312700072587)
+lb= 3403.4, ub= 3419.7, agap= 16.3, rgap= 0.00476
+lp_time=(0.00893, 4.6), mip_time=(48.6, 3.0); Ncut_off=(4, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 15
+    PfK = 0.75
+GRB_lu = (5562.421218321073, 5562.974008255282)
+lb= 5560.5, ub= 5569.3, agap= 8.8, rgap= 0.00158
+lp_time=(0.01113, 3.1), mip_time=(61.9, 4.5); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (5543.274168109019, 5543.895858400167)
+lb= 5541.3, ub= 5553.0, agap= 11.7, rgap= 0.0021
+lp_time=(0.0046, 2.2), mip_time=(32.7, 3.6); Ncut_off=(3, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 16
+    PfK = 0.75
+GRB_lu = (5127.3188703899295, 5128.1666211761885)
+lb= 5124.4, ub= 5133.9, agap= 9.5, rgap= 0.00185
+lp_time=(0.01542, 6.3), mip_time=(123.0, 5.0); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (4903.195911223114, 4904.326201794434)
+lb= 4900.8, ub= 4909.6, agap= 8.8, rgap= 0.0018
+lp_time=(0.01325, 5.7), mip_time=(57.6, 3.8); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 17
+    PfK = 0.75
+GRB_lu = (4998.2078534738575, 5001.358551357167)
+lb= 4996.7, ub= 5003.6, agap= 6.9, rgap= 0.00138
+lp_time=(0.01097, 3.4), mip_time=(95.5, 3.8); Ncut_off=(3, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (4818.323047084441, 4819.021089821481)
+lb= 4813.0, ub= 4821.0, agap= 8.0, rgap= 0.00165
+lp_time=(0.00634, 2.3), mip_time=(25.7, 3.0); Ncut_off=(3, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 18
+    PfK = 0.75
+GRB_lu = (4905.355659060691, 4909.324272763737)
+lb= 4903.2, ub= 4920.5, agap= 17.3, rgap= 0.00352
+lp_time=(0.01159, 4.5), mip_time=(96.4, 4.4); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (4768.835371271036, 4770.130611838137)
+lb= 4766.4, ub= 4773.8, agap= 7.4, rgap= 0.00155
+lp_time=(0.00872, 3.3), mip_time=(50.7, 5.0); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 19
+    PfK = 0.75
+GRB_lu = (6902.937919869406, 6904.098658116611)
+lb= 6899.5, ub= 6910.6, agap= 11.1, rgap= 0.00161
+lp_time=(0.00154, 3.2), mip_time=(18.3, 5.7); Ncut_off=(4, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (6686.754632379783, 6687.3092805197575)
+lb= 6684.6, ub= 6700.4, agap= 15.7, rgap= 0.00235
+lp_time=(0.00544, 2.7), mip_time=(52.5, 4.0); Ncut_off=(3, 5); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 20
+    PfK = 0.75
+GRB_lu = (8330.31403839124, 8331.13496834885)
+lb= 8322.9, ub= 8334.0, agap= 11.0, rgap= 0.00132
+lp_time=(0.00072, 2.5), mip_time=(30.4, 8.3); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (8229.783561391092, 8230.48975729246)
+lb= 8227.8, ub= 8232.4, agap= 4.6, rgap= 0.00056
+lp_time=(0.0006, 1.6), mip_time=(12.8, 4.6); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 21
+    PfK = 0.75
+GRB_lu = (4983.279735751749, 4985.387259482652)
+lb= 4977.9, ub= 4988.7, agap= 10.8, rgap= 0.00217
+lp_time=(0.00585, 6.1), mip_time=(94.3, 5.0); Ncut_off=(5, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (4750.118836717895, 4751.408014880179)
+lb= 4748.3, ub= 4755.7, agap= 7.4, rgap= 0.00156
+lp_time=(0.01098, 4.3), mip_time=(44.2, 3.4); Ncut_off=(3, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 22
+    PfK = 0.75
+GRB_lu = (7427.957494185627, 7428.507404688124)
+lb= 7425.9, ub= 7434.7, agap= 8.8, rgap= 0.00118
+lp_time=(0.0026, 2.4), mip_time=(57.4, 5.0); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (7381.12360818773, 7381.770318929117)
+lb= 7379.6, ub= 7387.7, agap= 8.2, rgap= 0.00111
+lp_time=(0.00132, 1.3), mip_time=(26.4, 4.9); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 23
+    PfK = 0.75
+GRB_lu = (2262.8653450083098, 2264.3202913117707)
+lb= 2260.8, ub= 2277.0, agap= 16.2, rgap= 0.00709
+lp_time=(0.01569, 4.7), mip_time=(73.3, 3.0); Ncut_off=(3, 10); Npruned=0
+    PfK = 1.0
+GRB_lu = (2263.2046137651364, 2264.240229700776)
+lb= 2260.2, ub= 2275.0, agap= 14.8, rgap= 0.0065
+lp_time=(0.01846, 5.4), mip_time=(53.0, 1.7); Ncut_off=(3, 7); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 24
+    PfK = 0.75
+GRB_lu = (13958.285356161674, 13959.21090770323)
+lb= 13957.4, ub= 13963.7, agap= 6.3, rgap= 0.00045
+lp_time=(0.00071, 0.4), mip_time=(14.4, 4.6); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+GRB_lu = (12757.494240009873, 12758.656396602342)
+lb= 12757.0, ub= 12761.4, agap= 4.4, rgap= 0.00035
+lp_time=(0.00056, 0.3), mip_time=(10.0, 3.6); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 25
+    PfK = 0.75
+GRB_lu = (10318.788009033307, 10324.870801439913)
+lb= 10313.3, ub= 10340.8, agap= 27.5, rgap= 0.00266
+lp_time=(0.0215, 7.6), mip_time=(202.6, 6.0); Ncut_off=(2, 11); Npruned=0
+    PfK = 1.0
+GRB_lu = (8700.060815902178, 8701.466176086826)
+lb= 8696.3, ub= 8707.4, agap= 11.1, rgap= 0.00127
+lp_time=(0.01147, 3.6), mip_time=(61.0, 5.6); Ncut_off=(1, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 26
+    PfK = 0.75
+GRB_lu = (6005.820439304837, 6006.738139558773)
+lb= 6001.5, ub= 6022.3, agap= 20.7, rgap= 0.00344
+lp_time=(0.01508, 3.7), mip_time=(45.7, 4.5); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (5976.726520321766, 5977.462887548407)
+lb= 5975.0, ub= 5985.7, agap= 10.6, rgap= 0.00178
+lp_time=(0.00721, 2.5), mip_time=(33.2, 3.4); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 27
+    PfK = 0.75
+GRB_lu = (8672.207566603007, 8673.111082773323)
+lb= 8665.0, ub= 8679.7, agap= 14.7, rgap= 0.0017
+lp_time=(0.00051, 1.1), mip_time=(7.5, 4.1); Ncut_off=(2, 0); Npruned=0
+    PfK = 1.0
+GRB_lu = (8144.534900938517, 8145.343301541804)
+lb= 8144.1, ub= 8150.7, agap= 6.7, rgap= 0.00082
+lp_time=(0.00068, 0.9), mip_time=(10.4, 3.1); Ncut_off=(2, 1); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 28
+    PfK = 0.75
+GRB_lu = (6425.101008177414, 6425.71813370959)
+lb= 6420.9, ub= 6436.6, agap= 15.7, rgap= 0.00244
+lp_time=(0.02502, 7.0), mip_time=(119.7, 4.6); Ncut_off=(5, 8); Npruned=0
+    PfK = 1.0
+GRB_lu = (5843.943681078722, 5844.522415925998)
+lb= 5841.2, ub= 5847.7, agap= 6.5, rgap= 0.00111
+lp_time=(0.02038, 3.8), mip_time=(36.3, 3.6); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 29
+    PfK = 0.75
+GRB_lu = (6006.951101347558, 6008.495031381291)
+lb= 6003.4, ub= 6010.7, agap= 7.3, rgap= 0.00122
+lp_time=(0.01409, 4.4), mip_time=(58.2, 5.2); Ncut_off=(4, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (5806.313836367451, 5806.716374397202)
+lb= 5804.8, ub= 5809.8, agap= 5.1, rgap= 0.00087
+lp_time=(0.00778, 2.8), mip_time=(37.4, 3.5); Ncut_off=(2, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 30
+    PfK = 0.75
+GRB_lu = (7647.125589392592, 7649.582990447967)
+lb= 7641.6, ub= 7658.3, agap= 16.7, rgap= 0.00218
+lp_time=(0.0195, 4.4), mip_time=(59.9, 5.1); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+GRB_lu = (6996.719050443247, 6998.563896052316)
+lb= 6994.4, ub= 7003.0, agap= 8.6, rgap= 0.00123
+lp_time=(0.00099, 2.5), mip_time=(25.7, 4.7); Ncut_off=(1, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 31
+    PfK = 0.75
+GRB_lu = (10270.199990160927, 10271.837038930444)
+lb= 10263.9, ub= 10274.7, agap= 10.8, rgap= 0.00105
+lp_time=(0.00988, 3.4), mip_time=(87.5, 4.9); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (9929.362332762688, 9930.333174975796)
+lb= 9927.7, ub= 9932.6, agap= 4.9, rgap= 0.0005
+lp_time=(0.00081, 1.4), mip_time=(21.3, 3.5); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 32
+    PfK = 0.75
+GRB_lu = (7083.989045906883, 7085.881863636043)
+lb= 7082.8, ub= 7101.0, agap= 18.2, rgap= 0.00256
+lp_time=(0.00409, 3.4), mip_time=(82.4, 4.6); Ncut_off=(3, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6861.860101332714, 6862.533550762835)
+lb= 6858.5, ub= 6865.0, agap= 6.5, rgap= 0.00095
+lp_time=(0.00645, 2.7), mip_time=(41.0, 3.9); Ncut_off=(3, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 33
+    PfK = 0.75
+GRB_lu = (8068.9435587353655, 8070.38572112182)
+lb= 8066.8, ub= 8076.2, agap= 9.4, rgap= 0.00117
+lp_time=(0.00238, 2.2), mip_time=(36.9, 4.6); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (7947.490308853934, 7948.256479458421)
+lb= 7943.7, ub= 7952.1, agap= 8.5, rgap= 0.00107
+lp_time=(0.00467, 1.8), mip_time=(24.3, 3.4); Ncut_off=(1, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 34
+    PfK = 0.75
+GRB_lu = (13225.496403900837, 13226.526105406638)
+lb= 13220.0, ub= 13234.1, agap= 14.1, rgap= 0.00107
+lp_time=(0.00334, 1.4), mip_time=(71.3, 5.4); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (12564.423922021782, 12565.389429436811)
+lb= 12562.2, ub= 12565.9, agap= 3.7, rgap= 0.0003
+lp_time=(0.0006, 0.4), mip_time=(8.2, 3.5); Ncut_off=(1, 1); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 35
+    PfK = 0.75
+GRB_lu = (6653.149932824944, 6653.811480106857)
+lb= 6650.3, ub= 6659.0, agap= 8.7, rgap= 0.00131
+lp_time=(0.00688, 3.0), mip_time=(88.7, 5.5); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+GRB_lu = (6367.452492803249, 6368.067647546623)
+lb= 6365.5, ub= 6371.2, agap= 5.7, rgap= 0.0009
+lp_time=(0.00857, 2.7), mip_time=(44.9, 4.0); Ncut_off=(2, 4); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 36
+    PfK = 0.75
+GRB_lu = (7186.79477464425, 7192.9896250790025)
+lb= 7183.0, ub= 7343.8, agap= 160.8, rgap= 0.02189
+lb= 7183.0, ub= 7337.0, agap= 153.9, rgap= 0.02098
+lb= 7183.0, ub= 7334.7, agap= 151.7, rgap= 0.02068
+lb= 7183.0, ub= 7214.5, agap= 31.5, rgap= 0.00436
+lp_time=(0.04684, 12.6), mip_time=(163.0, 29.4); Ncut_off=(4, 9); Npruned=0
+    PfK = 1.0
+GRB_lu = (6961.235689569941, 6961.893090967276)
+lb= 6957.3, ub= 6969.3, agap= 12.0, rgap= 0.00172
+lp_time=(0.01473, 4.4), mip_time=(35.6, 4.1); Ncut_off=(3, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 37
+    PfK = 0.75
+GRB_lu = (6312.317701692899, 6312.934328872511)
+lb= 6309.7, ub= 6320.5, agap= 10.9, rgap= 0.00172
+lp_time=(0.01107, 3.5), mip_time=(50.1, 4.6); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+GRB_lu = (6296.3027515281265, 6296.82287236736)
+lb= 6290.5, ub= 6301.9, agap= 11.4, rgap= 0.00182
+lp_time=(0.00982, 3.2), mip_time=(28.3, 3.6); Ncut_off=(2, 2); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 38
+    PfK = 0.75
+GRB_lu = (5409.778653933883, 5410.627029422084)
+lb= 5406.5, ub= 5553.6, agap= 147.1, rgap= 0.02649
+lb= 5406.5, ub= 5415.0, agap= 8.5, rgap= 0.00157
+lp_time=(0.02399, 4.6), mip_time=(37.6, 8.7); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+GRB_lu = (5395.046041170511, 5395.530733937982)
+lb= 5391.5, ub= 5396.2, agap= 4.7, rgap= 0.00087
+lp_time=(0.01011, 1.7), mip_time=(32.6, 3.1); Ncut_off=(1, 3); Npruned=0
+        S = 5, GeoLoad = 0, SEEDi = 39
+    PfK = 0.75
+GRB_lu = (6472.844287017713, 6473.783426723837)
+lb= 6468.8, ub= 6476.9, agap= 8.1, rgap= 0.00125
+lp_time=(0.00057, 0.7), mip_time=(5.4, 3.4); Ncut_off=(2, 0); Npruned=0
+    PfK = 1.0
+GRB_lu = (6466.099837329183, 6467.841773864284)
+lb= 6461.3, ub= 6473.6, agap= 12.3, rgap= 0.00189
+lp_time=(0.00055, 0.8), mip_time=(4.1, 2.6); Ncut_off=(2, 0); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 0
+    PfK = 0.75
+lb= 7070.9, ub= 7081.0, agap= 10.1, rgap= 0.00143
+lp_time=(0.00815, 6.3), mip_time=(77.8, 6.5); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+lb= 6049.4, ub= 6066.5, agap= 17.1, rgap= 0.00281
+lp_time=(0.00146, 4.3), mip_time=(20.3, 5.5); Ncut_off=(2, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 1
+    PfK = 0.75
+lb= 5607.3, ub= 5617.0, agap= 9.7, rgap= 0.00173
+lp_time=(0.01311, 7.9), mip_time=(110.0, 5.8); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+lb= 5568.1, ub= 5576.6, agap= 8.5, rgap= 0.00153
+lp_time=(0.01431, 5.3), mip_time=(60.9, 4.6); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 2
+    PfK = 0.75
+lb= 12906.9, ub= 12919.9, agap= 13.0, rgap= 0.00101
+lp_time=(0.00753, 3.1), mip_time=(101.0, 5.4); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+lb= 12573.6, ub= 12585.3, agap= 11.7, rgap= 0.00093
+lp_time=(0.00085, 1.4), mip_time=(18.5, 5.0); Ncut_off=(1, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 3
+    PfK = 0.75
+lb= 7407.8, ub= 7420.2, agap= 12.4, rgap= 0.00167
+lp_time=(0.00682, 4.6), mip_time=(104.5, 6.4); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+lb= 7285.2, ub= 7294.3, agap= 9.0, rgap= 0.00124
+lp_time=(0.00116, 2.9), mip_time=(38.8, 5.4); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 4
+    PfK = 0.75
+lb= 6860.3, ub= 6881.7, agap= 21.5, rgap= 0.00312
+lp_time=(0.01144, 9.9), mip_time=(150.0, 10.9); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+lb= 6685.8, ub= 6700.3, agap= 14.5, rgap= 0.00216
+lp_time=(0.01431, 8.2), mip_time=(63.9, 6.4); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 5
+    PfK = 0.75
+lb= 9115.9, ub= 9145.5, agap= 29.6, rgap= 0.00323
+lp_time=(0.0081, 7.8), mip_time=(202.3, 7.5); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+lb= 8780.2, ub= 8795.4, agap= 15.3, rgap= 0.00174
+lp_time=(0.00405, 4.0), mip_time=(86.4, 5.5); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 6
+    PfK = 0.75
+lb= 10910.9, ub= 10939.1, agap= 28.2, rgap= 0.00258
+lp_time=(0.00154, 3.7), mip_time=(56.6, 7.9); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+lb= 7641.4, ub= 7658.9, agap= 17.5, rgap= 0.00228
+lp_time=(0.00577, 6.6), mip_time=(93.2, 5.1); Ncut_off=(2, 5); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 7
+    PfK = 0.75
+lb= 7252.5, ub= 7276.3, agap= 23.7, rgap= 0.00326
+lp_time=(0.00749, 7.0), mip_time=(156.9, 10.8); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+lb= 7036.1, ub= 7046.6, agap= 10.5, rgap= 0.00148
+lp_time=(0.01554, 5.0), mip_time=(60.9, 4.9); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 8
+    PfK = 0.75
+lb= 7163.0, ub= 7170.0, agap= 7.0, rgap= 0.00098
+lp_time=(0.01594, 6.9), mip_time=(120.7, 6.5); Ncut_off=(1, 5); Npruned=0
+    PfK = 1.0
+lb= 7121.5, ub= 7128.9, agap= 7.4, rgap= 0.00104
+lp_time=(0.01942, 5.2), mip_time=(83.4, 5.6); Ncut_off=(1, 5); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 9
+    PfK = 0.75
+lb= 13726.0, ub= 13752.0, agap= 25.9, rgap= 0.00189
+lp_time=(0.01473, 5.6), mip_time=(149.5, 5.5); Ncut_off=(1, 6); Npruned=0
+    PfK = 1.0
+lb= 11850.0, ub= 11873.7, agap= 23.7, rgap= 0.002
+lp_time=(0.00053, 1.2), mip_time=(21.4, 4.7); Ncut_off=(1, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 10
+    PfK = 0.75
+lb= 6544.8, ub= 6553.5, agap= 8.7, rgap= 0.00132
+lp_time=(0.01763, 6.4), mip_time=(54.2, 6.1); Ncut_off=(2, 2); Npruned=0
+    PfK = 1.0
+lb= 6500.2, ub= 6507.9, agap= 7.7, rgap= 0.00118
+lp_time=(0.00865, 3.8), mip_time=(44.1, 5.2); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 11
+    PfK = 0.75
+lb= 7268.0, ub= 7281.5, agap= 13.5, rgap= 0.00186
+lp_time=(0.00869, 9.6), mip_time=(129.8, 6.8); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+lb= 7167.9, ub= 7179.1, agap= 11.3, rgap= 0.00157
+lp_time=(0.00129, 4.9), mip_time=(40.0, 5.3); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 12
+    PfK = 0.75
+lb= 7197.6, ub= 7214.0, agap= 16.3, rgap= 0.00226
+lp_time=(0.0033, 4.8), mip_time=(138.9, 7.0); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+lb= 6312.0, ub= 6324.6, agap= 12.6, rgap= 0.00199
+lp_time=(0.01878, 6.9), mip_time=(66.6, 5.1); Ncut_off=(2, 4); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 13
+    PfK = 0.75
+lb= 5833.9, ub= 5856.7, agap= 22.7, rgap= 0.00388
+lp_time=(0.02179, 18.3), mip_time=(322.5, 12.4); Ncut_off=(3, 13); Npruned=0
+    PfK = 1.0
+lb= 5540.3, ub= 5549.1, agap= 8.9, rgap= 0.0016
+lp_time=(0.0069, 6.7), mip_time=(82.1, 4.8); Ncut_off=(2, 4); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 14
+    PfK = 0.75
+lb= 6761.9, ub= 6770.8, agap= 8.9, rgap= 0.00132
+lp_time=(0.01817, 9.1), mip_time=(100.7, 7.3); Ncut_off=(3, 3); Npruned=0
+    PfK = 1.0
+lb= 6611.8, ub= 6620.5, agap= 8.8, rgap= 0.00132
+lp_time=(0.01018, 5.8), mip_time=(52.9, 5.4); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 15
+    PfK = 0.75
+lb= 7110.4, ub= 7140.3, agap= 30.0, rgap= 0.0042
+lp_time=(0.00407, 5.7), mip_time=(114.7, 8.3); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+lb= 7054.6, ub= 7071.0, agap= 16.4, rgap= 0.00232
+lp_time=(0.01175, 5.2), mip_time=(53.7, 6.0); Ncut_off=(2, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 16
+    PfK = 0.75
+lb= 7575.9, ub= 7587.3, agap= 11.4, rgap= 0.00151
+lp_time=(0.01315, 10.3), mip_time=(175.7, 6.9); Ncut_off=(3, 7); Npruned=0
+    PfK = 1.0
+lb= 7126.4, ub= 7137.3, agap= 10.9, rgap= 0.00153
+lp_time=(0.01791, 7.7), mip_time=(97.0, 6.2); Ncut_off=(2, 5); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 17
+    PfK = 0.75
+lb= 6872.3, ub= 6916.2, agap= 43.9, rgap= 0.00635
+lp_time=(0.01565, 6.2), mip_time=(138.4, 6.3); Ncut_off=(3, 6); Npruned=0
+    PfK = 1.0
+lb= 6735.7, ub= 6743.6, agap= 8.0, rgap= 0.00118
+lp_time=(0.00108, 2.5), mip_time=(38.3, 5.0); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 18
+    PfK = 0.75
+lb= 8285.0, ub= 8303.6, agap= 18.6, rgap= 0.00224
+lp_time=(0.0039, 6.4), mip_time=(147.6, 10.0); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+lb= 8179.8, ub= 8192.2, agap= 12.3, rgap= 0.00151
+lp_time=(0.00087, 2.4), mip_time=(25.1, 5.9); Ncut_off=(2, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 19
+    PfK = 0.75
+lb= 17050.0, ub= 17075.5, agap= 25.5, rgap= 0.00149
+lp_time=(0.0078, 2.3), mip_time=(50.7, 5.8); Ncut_off=(1, 2); Npruned=0
+    PfK = 1.0
+lb= 14535.3, ub= 14555.8, agap= 20.5, rgap= 0.00141
+lp_time=(0.00243, 2.1), mip_time=(41.8, 5.3); Ncut_off=(1, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 20
+    PfK = 0.75
+lb= 7197.4, ub= 7208.9, agap= 11.5, rgap= 0.00159
+lp_time=(0.01273, 7.0), mip_time=(91.8, 6.7); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+lb= 7173.8, ub= 7186.8, agap= 13.0, rgap= 0.00181
+lp_time=(0.00938, 4.3), mip_time=(57.4, 5.3); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 21
+    PfK = 0.75
+lb= 7437.9, ub= 7454.3, agap= 16.4, rgap= 0.0022
+lp_time=(0.00939, 9.3), mip_time=(128.2, 7.8); Ncut_off=(2, 4); Npruned=0
+    PfK = 1.0
+lb= 6873.6, ub= 6887.0, agap= 13.4, rgap= 0.00195
+lp_time=(0.01271, 6.8), mip_time=(70.4, 5.4); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 22
+    PfK = 0.75
+lb= 9956.0, ub= 9971.2, agap= 15.2, rgap= 0.00153
+lp_time=(0.00068, 2.4), mip_time=(24.9, 5.1); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+lb= 9929.9, ub= 9940.8, agap= 10.9, rgap= 0.0011
+lp_time=(0.0005, 1.3), mip_time=(16.3, 4.4); Ncut_off=(1, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 23
+    PfK = 0.75
+lb= 7301.3, ub= 7307.0, agap= 5.6, rgap= 0.00077
+lp_time=(0.01053, 5.5), mip_time=(92.3, 6.5); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+lb= 7236.5, ub= 7243.4, agap= 6.9, rgap= 0.00096
+lp_time=(0.00835, 3.8), mip_time=(61.1, 5.1); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 24
+    PfK = 0.75
+lb= 7059.6, ub= 7068.6, agap= 9.0, rgap= 0.00127
+lp_time=(0.00556, 4.2), mip_time=(86.0, 6.6); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+lb= 6938.6, ub= 6945.2, agap= 6.6, rgap= 0.00096
+lp_time=(0.00564, 3.6), mip_time=(58.8, 5.0); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 25
+    PfK = 0.75
+lb= 11179.0, ub= 11217.4, agap= 38.5, rgap= 0.00343
+lp_time=(0.0095, 4.4), mip_time=(242.8, 7.9); Ncut_off=(1, 10); Npruned=0
+    PfK = 1.0
+lb= 10146.2, ub= 10158.4, agap= 12.1, rgap= 0.00119
+lp_time=(0.00058, 1.9), mip_time=(21.4, 5.0); Ncut_off=(1, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 26
+    PfK = 0.75
+lb= 11905.9, ub= 11921.2, agap= 15.3, rgap= 0.00128
+lp_time=(0.00061, 1.7), mip_time=(31.5, 5.8); Ncut_off=(1, 1); Npruned=0
+    PfK = 1.0
+lb= 11816.5, ub= 11827.0, agap= 10.5, rgap= 0.00089
+lp_time=(0.00077, 1.2), mip_time=(19.7, 4.7); Ncut_off=(1, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 27
+    PfK = 0.75
+lb= 7174.2, ub= 7180.4, agap= 6.3, rgap= 0.00087
+lp_time=(0.00121, 5.2), mip_time=(51.6, 5.9); Ncut_off=(2, 1); Npruned=0
+    PfK = 1.0
+lb= 6926.6, ub= 6934.4, agap= 7.8, rgap= 0.00113
+lp_time=(0.02026, 6.3), mip_time=(63.9, 4.8); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 28
+    PfK = 0.75
+lb= 5765.4, ub= 5778.9, agap= 13.5, rgap= 0.00234
+lp_time=(0.01463, 9.5), mip_time=(196.9, 7.3); Ncut_off=(3, 8); Npruned=0
+    PfK = 1.0
+lb= 5646.6, ub= 5656.6, agap= 10.0, rgap= 0.00176
+lp_time=(0.01301, 5.9), mip_time=(65.4, 5.1); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 29
+    PfK = 0.75
+lb= 6915.1, ub= 6923.4, agap= 8.3, rgap= 0.0012
+lp_time=(0.01346, 9.5), mip_time=(208.2, 6.4); Ncut_off=(1, 10); Npruned=0
+    PfK = 1.0
+lb= 6762.7, ub= 6773.7, agap= 11.0, rgap= 0.00162
+lp_time=(0.01206, 5.2), mip_time=(64.0, 5.1); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 30
+    PfK = 0.75
+lb= 6891.3, ub= 6899.9, agap= 8.6, rgap= 0.00124
+lp_time=(0.0217, 9.7), mip_time=(134.5, 6.3); Ncut_off=(2, 5); Npruned=0
+    PfK = 1.0
+lb= 6781.8, ub= 6791.1, agap= 9.3, rgap= 0.00138
+lp_time=(0.01596, 7.5), mip_time=(53.8, 5.3); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 31
+    PfK = 0.75
+lb= 6924.2, ub= 6938.2, agap= 14.0, rgap= 0.00202
+lp_time=(0.01232, 12.8), mip_time=(217.5, 6.2); Ncut_off=(2, 9); Npruned=0
+    PfK = 1.0
+lb= 6669.8, ub= 6678.1, agap= 8.3, rgap= 0.00124
+lp_time=(0.008, 7.0), mip_time=(91.5, 4.9); Ncut_off=(2, 4); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 32
+    PfK = 0.75
+lb= 6942.7, ub= 6957.1, agap= 14.4, rgap= 0.00207
+lp_time=(0.00905, 6.6), mip_time=(110.2, 6.8); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+lb= 6778.7, ub= 6790.0, agap= 11.2, rgap= 0.00166
+lp_time=(0.01641, 6.7), mip_time=(48.9, 5.2); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 33
+    PfK = 0.75
+lb= 6855.6, ub= 6864.1, agap= 8.5, rgap= 0.00124
+lp_time=(0.01218, 5.8), mip_time=(86.1, 6.2); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+lb= 6828.4, ub= 6834.6, agap= 6.2, rgap= 0.00091
+lp_time=(0.01134, 4.3), mip_time=(48.2, 5.8); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 34
+    PfK = 0.75
+lb= 7751.7, ub= 7773.2, agap= 21.5, rgap= 0.00277
+lp_time=(0.01678, 7.0), mip_time=(128.9, 9.6); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+lb= 7583.6, ub= 7597.4, agap= 13.8, rgap= 0.00182
+lp_time=(0.00072, 2.9), mip_time=(27.0, 5.1); Ncut_off=(1, 1); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 35
+    PfK = 0.75
+lb= 5863.9, ub= 5879.3, agap= 15.3, rgap= 0.00261
+lp_time=(0.01246, 9.6), mip_time=(135.0, 8.1); Ncut_off=(3, 4); Npruned=0
+    PfK = 1.0
+lb= 5596.3, ub= 5603.9, agap= 7.7, rgap= 0.00137
+lp_time=(0.00934, 6.0), mip_time=(60.4, 4.6); Ncut_off=(2, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 36
+    PfK = 0.75
+lb= 18075.7, ub= 18097.5, agap= 21.8, rgap= 0.00121
+lp_time=(0.00672, 3.8), mip_time=(128.6, 6.2); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+lb= 15295.2, ub= 15319.4, agap= 24.3, rgap= 0.00158
+lp_time=(0.00079, 1.5), mip_time=(37.2, 5.3); Ncut_off=(0, 2); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 37
+    PfK = 0.75
+lb= 7469.1, ub= 7479.8, agap= 10.7, rgap= 0.00143
+lp_time=(0.00169, 4.2), mip_time=(87.5, 7.5); Ncut_off=(1, 4); Npruned=0
+    PfK = 1.0
+lb= 7417.4, ub= 7432.6, agap= 15.2, rgap= 0.00204
+lp_time=(0.00737, 4.0), mip_time=(61.3, 6.2); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 38
+    PfK = 0.75
+lb= 6839.3, ub= 6850.5, agap= 11.2, rgap= 0.00163
+lp_time=(0.01378, 6.6), mip_time=(85.1, 6.6); Ncut_off=(2, 3); Npruned=0
+    PfK = 1.0
+lb= 6798.4, ub= 6802.3, agap= 3.8, rgap= 0.00056
+lp_time=(0.00105, 2.5), mip_time=(38.5, 4.7); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 1, SEEDi = 39
+    PfK = 0.75
+lb= 6737.3, ub= 6744.2, agap= 6.9, rgap= 0.00102
+lp_time=(0.00703, 3.9), mip_time=(71.0, 6.9); Ncut_off=(1, 3); Npruned=0
+    PfK = 1.0
+lb= 6689.8, ub= 6698.1, agap= 8.3, rgap= 0.00124
+lp_time=(0.01188, 4.3), mip_time=(55.0, 5.7); Ncut_off=(1, 3); Npruned=0
+        S = 127, GeoLoad = 0, SEEDi = 0
+    PfK = 0.75
+lb= 7777.8, ub= 7790.5, agap= 12.6, rgap= 0.00162
+lp_time=(0.00809, 8.2), mip_time=(202.7, 6.1); Ncut_off=(2, 7); Npruned=0
+    PfK = 1.0
+lb= 6914.5, ub= 6929.0, agap= 14.5, rgap= 0.0021
+lp_time=(0.00138, 3.8), mip_time=(35.4, 5.3); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 0, SEEDi = 1
+    PfK = 0.75
+lb= 6639.1, ub= 6654.1, agap= 15.0, rgap= 0.00226
+lp_time=(0.01152, 12.9), mip_time=(168.4, 6.8); Ncut_off=(2, 8); Npruned=0
+    PfK = 1.0
+lb= 6549.6, ub= 6559.8, agap= 10.2, rgap= 0.00155
+lp_time=(0.00547, 5.3), mip_time=(51.8, 4.6); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 0, SEEDi = 2
+    PfK = 0.75
+lb= 6390.9, ub= 6406.4, agap= 15.5, rgap= 0.00242
+lp_time=(0.0132, 9.0), mip_time=(134.1, 7.3); Ncut_off=(3, 5); Npruned=0
+    PfK = 1.0
+lb= 6195.1, ub= 6206.2, agap= 11.2, rgap= 0.0018
+lp_time=(0.00235, 5.2), mip_time=(32.2, 4.6); Ncut_off=(2, 2); Npruned=0
+        S = 127, GeoLoad = 0, SEEDi = 3
+    PfK = 0.75
+^C
